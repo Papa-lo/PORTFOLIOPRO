@@ -1,0 +1,273 @@
+/* Classe pour cacher visuellement mais garder pour l'accessibilité */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        margin: 0;
+        font-family: "Tourney", sans-serif;
+        min-height: 100vh;
+        display: grid;
+        /* 1 colonne pour le menu (250px) et le reste pour le contenu */
+        grid-template-columns: 250px 1fr;
+        /* 3 lignes : header (auto), main (espace dispo), footer (auto) */
+        grid-template-rows: auto 1fr auto;
+
+        aside {
+            background-color: #D8CFC4;
+            font-family: "Tektur", sans-serif;
+            /* L'aside prend les 3 lignes verticalement */
+            grid-row: 1 / 4; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+
+            ul {
+                padding: 0;
+                li {
+                    list-style-type: none;
+                }
+            }
+
+            .back-to-top {
+                /* margin-top: auto pousse la flèche tout en bas du sidebar sur desktop */
+                margin-top: auto;
+                margin-bottom: 30px;
+
+                img {
+                    height: 70px;
+                }
+            }
+        }
+
+        #body-header {
+            background-color: black;
+            text-align: center;
+            color: white;
+            padding: 15px 0;
+            /* Le secret pour qu'il passe DEVANT le carrousel : un z-index élevé */
+            position: relative;
+            z-index: 10;
+
+            p {
+                margin: 0;
+                font-family: "Bungee Hairline", sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                border-bottom: solid white 1px;
+                display: inline-block;
+            }
+        }
+
+        main {
+            /* On donne une marge négative au main pour qu'il glisse SOUS le header */
+            margin-top: -30px;
+            z-index: 1;
+            padding: 0 20px 20px 20px;
+
+            .carousel {
+                display: grid;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                #slogan {
+                    grid-area: 1 / 1;
+                    z-index: 2;
+                    color: white;
+                    text-align: center;
+                    /* Flex column pour mettre le sous-titre SOUS le titre */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 60px 20px;
+
+                    h1 {
+                        font-size: 3.5rem;
+                        font-weight: 300;
+                        margin: 0 0 20px 0; /* Espace sous le h1 */
+                        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+                        margin: 0;
+                    }
+                }
+
+                .carousel-container {
+                    grid-area: 1 / 1;
+                    display: flex;
+                    transition: transform 0.5s ease;
+
+                    .slide {
+                        min-width: 100%;
+
+                        img {
+                            width: 100%;
+                            /* height: auto est la clé pour voir l'image EN ENTIER sans la couper ! */
+                            height: auto; 
+                            display: block;
+                        }
+                    }
+                }
+
+                .prev, .next {
+                    position: absolute;
+                    top: 40%; /* Ajusté pour ne pas cacher le texte */
+                    transform: translateY(-50%);
+                    background: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    color: white;
+                    font-size: 3rem;
+                    padding: 0 15px;
+                    cursor: pointer;
+                    z-index: 3;
+                }
+
+                .prev { left: 10px; }
+                .next { right: 10px; }
+
+                .dots {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    gap: 8px;
+                    z-index: 3;
+
+                    .dot {
+                        width: 12px;
+                        height: 12px;
+                        background-color: white;
+                        border-radius: 50%;
+                        opacity: 0.5;
+                        cursor: pointer;
+
+                        /* Syntaxe pour cibler une classe avec une autre classe en CSS imbriqué */
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            #moi {
+                font-family: "Tektur", sans-serif;
+                text-align: center;
+                padding: 40px 0;
+            }
+
+            #contact {
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: center;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+
+                    input, textarea {
+                        font-family: inherit;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                    }
+                }
+
+                .bouton-envoyer {
+                    font-family: "Tektur", sans-serif;
+                    padding: 10px 20px;
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        #body-footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+    }
+}
+
+/* ========================================== */
+/* RESPONSIVE : Écrans moins de 1024px        */
+/* ========================================== */
+@media (max-width: 1024px) {
+    html body {
+        /* On passe à 1 seule colonne */
+        grid-template-columns: 1fr;
+
+        aside {
+            /* L'aside ne prend plus tout le côté gauche */
+            grid-row: auto; 
+            /* On met le menu en ligne horizontale */
+            flex-direction: row; 
+            justify-content: space-between;
+            padding: 15px 20px;
+
+            .back-to-top {
+                /* La flèche devient "flottante" et se colle en bas à droite de l'écran */
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50; /* Pour être sûr qu'elle est au-dessus de tout le contenu */
+                margin: 0; /* On annule le margin-top: auto du desktop */
+                opacity: 0; /* La flèche est invisible par défaut */
+                pointer-events: none; /* Empêche de cliquer dessus quand elle est invisible */
+                transition: opacity 0.3s ease; /* Fait une petite animation fluide quand elle apparaît */
+
+                img {
+                    height: 50px; /* Un peu plus petite sur mobile pour ne pas gêner */
+                }
+
+                /* Quand la flèche a la classe "visible", elle réapparaît */
+                &.visible {
+                    opacity: 1;
+                    pointer-events: auto; /* Le clic redevient possible */
+                }
+            }
+        }
+
+        main {
+            /* Plus besoin de la marge négative sur mobile, le header est au-dessus */
+            margin-top: 0;
+
+            .carousel {
+                #slogan {
+                    h1 {
+                        font-size: 2rem; /* Plus petit sur mobile */
+                    }
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+
+                .prev, .next {
+                    font-size: 2rem; /* Boutons plus petits sur mobile */
+                }
+            }
+        }
+    }
+}

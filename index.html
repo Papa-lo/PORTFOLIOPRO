@@ -1,32 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Pro</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHLS-Web Solutions | Développeur Web à Saint Ciers sur Gironde</title>
+    
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Tektur:wght@400..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Titre h1 Général Accueil</h1>
+
+    <!-- ASIDE : Navigation latérale -->
+    <aside>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#contact">Contactez-moi</a></li>
             </ul>
         </nav>
+        <!-- La flèche est poussée tout en bas sur desktop, mais cachée sur mobile -->
+        <a href="#" class="back-to-top" aria-label="Retourner en haut de la page">
+            <img src="images/fleche.png" alt="Icône flèche vers le haut">
+        </a>
+    </aside>
+
+    <!-- HEADER : Simple barre de marque, ce n'est PAS le titre principal -->
+    <header id="body-header">
+        <p>AHLS-Web Solutions</p>
     </header>
 
+    <!-- MAIN : Contenu principal -->
     <main>
-        <section id="articles">
-            <hgroup>
-                <h2>Sous titre h2</h2>
-                <p>paragraphe</p>
-            </hgroup>
 
+        <!-- SECTION CARROUSEL -->
+        <section class="carousel" aria-label="Carrousel de présentation">
+            
+            <!-- LE VRAI H1 SEO EST ICI -->
+            <div id="slogan">
+                <h1>Vos idées. Mon atelier. Le web.</h1>
+                <p>Votre savoir-faire mérite d'être vu.</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- alt descriptifs pour le SEO -->
+                <div class="slide">
+                    <img src="images/image1.webp" alt="Capture d'écran du projet web numéro 1">
+                </div>
+                <div class="slide">
+                    <img src="images/image2.webp" alt="Capture d'écran du projet web numéro 2">
+                </div>
+                <div class="slide">
+                    <img src="images/image4.webp" alt="Capture d'écran du projet web numéro 3">
+                </div>
+            </div>
+
+            <button class="prev" aria-label="Diapositive précédente">‹</button>
+            <button class="next" aria-label="Diapositive suivante">›</button>
+
+            <div class="dots" aria-hidden="true"></div>
+
+        </section>
+
+        <!-- SECTION MOI -->
+        <section id="moi">
             <article>
                 <header>
-                    <h3>Sous sous titre h3</h3>
+                    <h2>Sous sous titre h2</h2>
                     <p>paragraphe</p>
                 </header>
                 <p>
@@ -40,14 +80,37 @@
             </article>
         </section>
 
-        <aside>
-            <h3>Articles Connexes</h3>
-        </aside>
+        <!-- SECTION CONTACT -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form action="https://formspree.io/f/mppaqdev" method="POST">
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                
+                <div class="form-group">
+                    <label for="name" class="sr-only">Votre nom</label>
+                    <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="sr-only">Votre adresse email</label>
+                    <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="sr-only">Votre message</label>
+                    <textarea name="message" id="message" placeholder="Votre message" cols="30" rows="10" required></textarea>
+                </div>
+
+                <input class="bouton-envoyer" type="submit" value="Envoyer">
+            </form>
+        </section>
+
     </main>
 
-  <footer>
-    <p>A remplir</p>
-  </footer>
+    <footer id="body-footer">
+        <p>© 2024 AHLS-Web Solutions</p>
+    </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
