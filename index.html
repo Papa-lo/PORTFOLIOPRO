@@ -1,116 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AHLS-Web Solutions | Développeur Web à Saint Ciers sur Gironde</title>
-    
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Tektur:wght@400..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
 
-    <!-- ASIDE : Navigation latérale -->
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="#contact">Contactez-moi</a></li>
-            </ul>
-        </nav>
-        <!-- La flèche est poussée tout en bas sur desktop, mais cachée sur mobile -->
-        <a href="#" class="back-to-top" aria-label="Retourner en haut de la page">
-            <img src="images/fleche.png" alt="Icône flèche vers le haut">
-        </a>
-    </aside>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AHLS Web-Solutions | Développeur Web à Saint Ciers sur Gironde</title>
+        
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Tektur:wght@400..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
 
-    <!-- HEADER : Simple barre de marque, ce n'est PAS le titre principal -->
-    <header id="body-header">
-        <p>AHLS-Web Solutions</p>
-    </header>
+    <body>
+        <header id="body-header"><!-- HEADER -->
+            <div id="left">
+                <p>AHLS</p>
+                <p>WEB-Solutions</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#contact">Contactez-moi</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- MAIN : Contenu principal -->
-    <main>
+        <!-- MAIN : Contenu principal -->
+        <main>
+            <section id="hero">
+                <img src="images/image1.webp" alt="Capture d'écran du projet web numéro 1">
+                <div id="slogan">
+                    <h1>Vos idées. Mon atelier. Le web.</h1>
+                    <p>Votre savoir-faire mérite d'être vu.</p>
+                </div>
+            </section>
 
-        <!-- SECTION CARROUSEL -->
-        <section class="carousel" aria-label="Carrousel de présentation">
             
-            <!-- LE VRAI H1 SEO EST ICI -->
-            <div id="slogan">
-                <h1>Vos idées. Mon atelier. Le web.</h1>
-                <p>Votre savoir-faire mérite d'être vu.</p>
-            </div>
+            <!-- SECTION vous -->
+            <section id="vous">
+                <article>
+                    
+                    <div id="detail-vous">
+                        <header>
+                        <h2>Sous titre h2 vous</h2>
+                        <h3>Sous titre h3 vous</h3>
+                        </header>
+                    
+                        <p>paragraphe
+                        </p>
+                        <p>
+                            paragraphe2
+                        </p>
+                        <footer>
+                            <p>footer de l'article</p>
+                        </footer>
+                    </div>
+                    <img src="images/Batiment.webp" alt="">
+                </article>
+            </section>
 
-            <div class="carousel-container">
-                <!-- alt descriptifs pour le SEO -->
-                <div class="slide">
-                    <img src="images/image1.webp" alt="Capture d'écran du projet web numéro 1">
-                </div>
-                <div class="slide">
-                    <img src="images/image2.webp" alt="Capture d'écran du projet web numéro 2">
-                </div>
-                <div class="slide">
-                    <img src="images/image4.webp" alt="Capture d'écran du projet web numéro 3">
-                </div>
-            </div>
+            <!-- SECTION MOI -->
+            <section id="moi">
+                <article>
+                    <img src="images/moi.webp" alt="Photo de Laurent Ahlsweh, développeur web">
+                    <div id="detail-moi">
+                        <header>
+                            <h2>Sous titre h2 moi</h2>
+                            <h3>Sous titre h3 moi</h3>
+                        </header>
+                    
+                        <p>Je conçois des sites web modernes, mais aussi des <strong>applications et outils web sur mesure</strong>, pensés pour répondre aux besoins
+                            concrets des professionnels. Mon objectif : transformer une idée, un besoin ou une problématique en une solution simple, efficace et accessible.
+                            Mon expérience de plus de 20 ans dans le secteur du bâtiment m’a appris à comprendre les réalités du terrain, les contraintes d’une entreprise
+                            et les enjeux de ses clients. Aujourd’hui développeur web, je mets cette double compétence au service de vos projets : <strong>un regard 
+                            technique, mais aussi une vraie compréhension du métier et de ses besoins.</strong>
+                        </p>
+                        <p>
+                            Mon véritable atout ? Je ne découvre pas le monde de l’entreprise avec le développement web. Après plusieurs années dans le secteur du bâtiment,
+                            notamment en bureau d’étude, en administration des ventes et aux côtés de la direction d’agence, j'ai appris à comprendre les besoins d'un client,
+                            les contraintes d'une entreprise et surtout les enjeux commerciaux qui se cachent derrière un projet. Aujourd'hui, j'associe cette expérience à
+                            mes compétences de développeur pour créer des solutions qui ne se contentent pas d'être belles : elles doivent vous aider à être trouvé, à être
+                            compris et surtout à ne pas laisser passer une opportunité.
+                        </p>
+                        <footer>
+                            <p>A remplir</p>
+                        </footer>
+                    </div>
+                </article>
+            </section>
 
-            <button class="prev" aria-label="Diapositive précédente">‹</button>
-            <button class="next" aria-label="Diapositive suivante">›</button>
+            <!-- SECTION autre -->
+            <section id="autre">
+                <article>
+                    
+                    <div id="detail-autre">
+                        <header>
+                        <h2>Sous titre h2 autre</h2>
+                        <h3>Sous titre h3 autre</h3>
+                        </header>
+                    
+                        <p>paragraphe
+                        </p>
+                        <p>
+                            paragraphe2
+                        </p>
+                        <footer>
+                            <p>footer de l'article</p>
+                        </footer>
+                    </div>
+                    <img src="images/Batiment.webp" alt="">
+                </article>
+            </section>
 
-            <div class="dots" aria-hidden="true"></div>
+            <section id="autre2">
+                <article>
+                    <img src="images/moi.webp" alt="Photo de Laurent Ahlsweh, développeur web">
+                    <div id="detail-autre2">
+                        <header>
+                            <h2>Sous titre h2 autre2</h2>
+                            <h3>Sous titre h3 autre2</h3>
+                        </header>
+                    
+                        <p>blabla
+                        </p>
+                        <p>
+                            blabla.
+                        </p>
+                        <footer>
+                            <p>A remplir</p>
+                        </footer>
+                    </div>
+                </article>
+            </section>
 
-        </section>
 
-        <!-- SECTION MOI -->
-        <section id="moi">
-            <article>
-                <header>
-                    <h2>Sous sous titre h2</h2>
-                    <p>paragraphe</p>
-                </header>
-                <p>
-                    Paragraphe avec des éléments d'emphase : <em>emphase classique</em>, 
-                    <strong>importance forte</strong>, <mark>texte surligné</mark>, 
-                    <small>mention en petit</small>.
-                </p>
-                <footer>
-                    <p>A remplir</p>
-                </footer>
-            </article>
-        </section>
+            <!-- SECTION CONTACT -->
+            <section id="contact">
+                <h2>Contactez-moi</h2>
+                <form action="https://formspree.io/f/mppaqdev" method="POST">
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Votre nom</label>
+                        <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                    </div>
 
-        <!-- SECTION CONTACT -->
-        <section id="contact">
-            <h2>Contactez-moi</h2>
-            <form action="https://formspree.io/f/mppaqdev" method="POST">
-                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                
-                <div class="form-group">
-                    <label for="name" class="sr-only">Votre nom</label>
-                    <input type="text" name="name" id="name" placeholder="Votre nom" required>
-                </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Votre adresse email</label>
+                        <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email" class="sr-only">Votre adresse email</label>
-                    <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
-                </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Votre message</label>
+                        <textarea name="message" id="message" placeholder="Votre message" cols="30" rows="10" required></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message" class="sr-only">Votre message</label>
-                    <textarea name="message" id="message" placeholder="Votre message" cols="30" rows="10" required></textarea>
-                </div>
+                    <input class="bouton-envoyer" type="submit" value="Envoyer">
+                </form>
+            </section>
 
-                <input class="bouton-envoyer" type="submit" value="Envoyer">
-            </form>
-        </section>
+        </main>
 
-    </main>
+        <footer id="body-footer">
+            <p>© 2026 AHLS-Web Solutions</p>
+        </footer>
 
-    <footer id="body-footer">
-        <p>© 2024 AHLS-Web Solutions</p>
-    </footer>
-
-    <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+    </body>
 </html>
