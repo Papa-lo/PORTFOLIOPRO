@@ -1,0 +1,61 @@
+/*_________________________________Entete*/
+#body-header {
+    font-family: "Tektur", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px white;
+    padding: 1% 3%;
+    font-size: 0.9rem;
+
+    position: sticky; /* Dit au header de se coller quand on scroll */
+    top: 0;           /* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
+    z-index: 100;     /* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
+}
+
+#left {
+    /* text-align: center; */
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* font-size: clamp(1rem, 5vw, 2rem); */
+
+}
+
+#left img {
+    height: clamp(20px, 40vw, 30px);
+}
+
+#body-header p {
+    margin: 0;
+}
+
+#body-header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+#body-header a {
+    text-decoration: none;
+    color: white;
+}
+
+#body-header a:hover {
+    color: #004bca;
+}
+
+#body-footer {/*_____________footer*/
+    background-color: black;
+    color: white;
+}
+
+#body-footer p {
+    margin: 0;
+}

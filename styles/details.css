@@ -1,0 +1,17 @@
+.page-detail {/*______________________________Style pages détails articles*/
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: "Tektur", sans-serif;
+    line-height: 1.6;
+}
+
+.page-detail ul {
+    background-color: #f4f4f4;
+    border-left: 4px solid black;
+    padding: 15px 20px;
+}
+
+.page-detail li {
+    margin-bottom: 10px;
+}
