@@ -4,10 +4,12 @@ html {
 
 body {
     margin: 0;
-    background-color: bisque;
+    background-color: #f3f6f6;
+    /* background-image: url(/images/crepis.webp); */
 }
 /*_________________________________Entete*/
 #body-header {
+    font-family: "Tektur", sans-serif;
     background-color: black;
     color: white;
     display: flex;
@@ -15,11 +17,26 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px white;
-    padding: 0 3%;
+    padding: 1% 3%;
+    font-size: 0.9rem;
+
+    position: sticky; /* Dit au header de se coller quand on scroll */
+    top: 0;           /* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
+    z-index: 100;     /* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
 }
 
 #left {
-    text-align: center;
+    /* text-align: center; */
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* font-size: clamp(1rem, 5vw, 2rem); */
+
+}
+
+#left img {
+    height: clamp(20px, 40vw, 30px);
 }
 
 #body-header p {
@@ -30,11 +47,17 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 #body-header a {
     text-decoration: none;
     color: white;
+}
+
+#body-header a:hover {
+    color: #004bca;
 }
 
 /*_________________________________Hero*/
@@ -50,17 +73,17 @@ body {
     height: auto;
 }
 
-#slogan {
-    font-family: "Tourney", sans-serif;
+#slogan {/*________________________________________slogan*/
     grid-area: 1/1;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,1); */
     color: white;
+    
 
     /*________________________________________anim slogan*/
     opacity: 0;
-    transform: translateY(30px);/*Décale de 20px vers le bas*/
-    animation: apparition 1s ease 0.3s forwards;/*Dure 1 sec., avec délai 0.3s pour laisser image charger*/
+    transform: translateY(50px);/*Décale de 30px vers le bas*/
+    animation: apparition 1s ease 0.2s forwards;/*Dure 1 sec., avec délai 0.3s pour laisser image charger*/
 }
 @keyframes apparition {
     to {
@@ -70,6 +93,7 @@ body {
 }
 
 #slogan h1 {
+    font-family: "Tourney", sans-serif;
     font-weight: 300;
     font-size: clamp(2rem, 5vw, 4rem);
     /* color: white; */
@@ -77,16 +101,67 @@ body {
 }
 
 #slogan p {
+    font-family: "Tektur", sans-serif;
     font-weight: 700;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     /* color: white; */
     margin-top: 9%;
 }
 
+.btn-hero {
+    font-family: "Tektur", sans-serif;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: #004bca; /* Nuance légèrement plus sombre */
+  color: white;
+  transform: translateY(-2px); /* Léger soulèvement */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse-subtle {/*___________________________anim btn-hero*/
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Aggrandissement très léger (+5%) */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /*_________________________________Intro*/
 #intro {
     font-family: "Tektur", sans-serif;
+    
+}
+
+#intro h2 {
     text-align: center;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+#intro p {
+    margin: 0 5%;
+    padding: 0 5%;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    font-size: clamp(0.85rem, 1.1vw, 1.6rem);
+    line-height: 1.5;
 }
 /*_________________________________Contenu*/
 /* --- ANIMATION AU SCROLL --- */
@@ -105,11 +180,12 @@ body {
 
 /* On garde ton effet de survol existant ! */
 .anim:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-10px); */
+    transform: scale(1.03);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-#expert, #artisan, #vu {
+#expert, #artisan, #vu, #hote {
     margin: 50px 0;
 }
 
@@ -118,14 +194,17 @@ article {background-color: white;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px;
-    margin: 10px;
+    margin: 20px;
     align-items: center;
     border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 article:hover {
-    transform: translateY(-5px); /* S'élève de 5 pixels vers le haut */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Ombre portée qui s'agrandit */
+    /* S'élève de 5 pixels vers le haut */
+    /* transform: translateY(-5px); */
+    /* Ombre portée qui s'agrandit */
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
 }
 
 
@@ -134,11 +213,13 @@ article h2 {
   text-align: center;
   margin: 0 0 10px 0;
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
+  margin: 0 5% 5% 0;
 }
 
 article p {
-  font-size: clamp(0.85rem, 1.1vw, 1rem);
-  line-height: 1.5;
+    font-size: clamp(0.85rem, 1.1vw, 1.6rem);
+    line-height: 1.5;
+    margin: 0 4%;
 }
 
 article img {/* --- Style uniforme images (portrait ou paysage) --- */
@@ -147,14 +228,43 @@ article img {/* --- Style uniforme images (portrait ou paysage) --- */
   max-width: 100%;/* Sécurité pour ne pas dépasser du bloc */
   object-fit: contain;/*Affiche l'image ENTIÈRE sans la rogner*/
   border-radius: 20px;
+  margin: 5px;
 }
 
 .reverse {
     grid-template-columns: 1fr auto;
-  }
+}
 .reverse img {
     order: 2;
-  }
+}
+
+article footer {
+    text-align: center;
+}
+
+article a {
+    text-align: center;
+    font-family: "Tektur", sans-serif;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+article a:hover,
+article a:focus {
+  background-color: #004bca; /* Nuance légèrement plus sombre */
+  transform: translateY(-2px); /* Léger soulèvement */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
 
 
 #localisation {/*_________________________________localisation*/
@@ -197,6 +307,10 @@ article img {/* --- Style uniforme images (portrait ou paysage) --- */
 #body-footer {/*_____________footer*/
     background-color: black;
     color: white;
+}
+
+#body-footer p {
+    margin: 0;
 }
 
 .back-to-top {/*______________________________BOUTON BACK TO TOP*/
@@ -252,4 +366,23 @@ article img {/* --- Style uniforme images (portrait ou paysage) --- */
     order: 2;/*Force image à passer SOUS texte pour tous articles */
     justify-self: center;/*Centre image horizontalement*/
   }
+}
+
+
+.page-detail {/*______________________________Style pages détails articles*/
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: "Tektur", sans-serif;
+    line-height: 1.6;
+}
+
+.page-detail ul {
+    background-color: #f4f4f4;
+    border-left: 4px solid black;
+    padding: 15px 20px;
+}
+
+.page-detail li {
+    margin-bottom: 10px;
 }

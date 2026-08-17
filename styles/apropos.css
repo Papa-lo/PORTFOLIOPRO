@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tektur", sans-serif;
+    margin: 0;
+    background-color: #f3f6f6;
+}
+
+/*_________________________________Entete*/
+#body-header {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px white;
+    padding: 2% 3%;
+    font-size: 0.9rem;
+
+    position: sticky; /* Dit au header de se coller quand on scroll */
+    top: 0;           /* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
+    z-index: 100;     /* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
+}
+
+#left {
+    text-align: center;
+}
+
+#body-header p {
+    margin: 0;
+}
+
+#body-header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+#body-header a {
+    text-decoration: none;
+    color: white;
+}
+
+#body-header a:hover {
+    color: #004bca;
+}
+/*_________________________________Moi*/
+#moi {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: "Tektur", sans-serif;
+    line-height: 1.6;
+}
+
+#Ap-title {
+    text-align: center;
+}
+
+#Ap-intro {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+#Ap-intro p {
+    margin: 0 4%;
+}
+
+#Ap-intro img {
+    height: clamp(200px, 40vw, 300px);
+}
