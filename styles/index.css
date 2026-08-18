@@ -8,89 +8,7 @@ body {
     /* background-image: url(/images/crepis.webp); */
 }
 
-/*_________________________________Hero*/
-#hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
 
-#hero img {
-    grid-area: 1/1;
-    width: 100%;
-    height: auto;
-}
-
-#slogan {/*________________________________________slogan*/
-    grid-area: 1/1;
-    text-align: center;
-    /* text-shadow: 2px 2px 4px rgba(0,0,0,1); */
-    color: white;
-    
-
-    /*________________________________________anim slogan*/
-    opacity: 0;
-    transform: translateY(50px);/*Décale de 30px vers le bas*/
-    animation: apparition 1s ease 0.2s forwards;/*Dure 1 sec., avec délai 0.3s pour laisser image charger*/
-}
-@keyframes apparition {
-    to {
-        opacity: 1; /*Réapparaît*/
-        transform: translateY(0); /*Revient à sa place normale*/
-    }
-}
-
-#slogan h1 {
-    font-family: "Tourney", sans-serif;
-    font-weight: 300;
-    font-size: clamp(2rem, 5vw, 4rem);
-    /* color: white; */
-    margin-top: 15%;
-}
-
-#slogan p {
-    font-family: "Tektur", sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    /* color: white; */
-    margin-top: 9%;
-}
-
-.btn-hero {
-    font-family: "Tektur", sans-serif;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: white;
-    color: black;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    animation: pulse-subtle 2.5s infinite ease-in-out;
-}
-
-.btn-hero:hover,
-.btn-hero:focus {
-  background-color: #004bca; /* Nuance légèrement plus sombre */
-  color: white;
-  transform: translateY(-2px); /* Léger soulèvement */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes pulse-subtle {/*___________________________anim btn-hero*/
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05); /* Aggrandissement très léger (+5%) */
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 /*_________________________________Intro*/
 #intro {
@@ -115,9 +33,9 @@ body {
 /* --- ANIMATION AU SCROLL --- */
 .anim {
     opacity: 0;
-    transform: translateY(40px);
+    /* transform: translateY(40px); */
     /* Prépare l'animation, mais n'attend pas de délai compliqué ici */
-    transition: opacity 0.8s ease, transform 0.8s ease; 
+    transition: opacity 0.7s ease, transform 0.7s ease; 
 }
 
 /* Quand le JS ajoute la classe "visible", l'animation se lance */
@@ -128,8 +46,9 @@ body {
 
 /* On garde ton effet de survol existant ! */
 .anim:hover {
-    /* transform: translateY(-10px); */
-    transform: scale(1.03);
+    transform: translateY(-10px);
+    /* transform: scale(-1.02); */
+    transform: scale(1.02);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -244,57 +163,13 @@ article a:focus {
 }
 
 
-#contact {/*_____________contact*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 
 
 
-.back-to-top {/*______________________________BOUTON BACK TO TOP*/
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    /* z-index: 1000; */
 
-    width: 60px;
-    height: 60px;
 
-    padding: 0;
-    border: none;
-    background: transparent;
-
-    cursor: pointer;
-
-    /* mix-blend-mode: difference; */
-
-    
-
-    /* opacity: 0; */
-    visibility: hidden;
-    /* transform: translateY(20px); */
-
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease,
-        visibility 0.5s ease;
-
-}
-
-.back-to-top.visible {
-
-    visibility: visible;
-    /* transform: translateY(0); */
-}
-
-.back-to-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
 @media (max-width: 767px) {/*______________________________RÈGLES MOBILE (< 768px)*/
   article, 

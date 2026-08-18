@@ -1,3 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f6f6;
+    /* background-image: url(/images/crepis.webp); */
+}
+
 /*_________________________________Entete*/
 #body-header {
     font-family: "Tektur", sans-serif;
@@ -58,4 +68,48 @@
 
 #body-footer p {
     margin: 0;
+}
+
+.legal-page {
+    font-family: "Tektur", sans-serif;
+}
+
+.back-to-top {/*______________________________BOUTON BACK TO TOP*/
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+
+    width: 60px;
+    height: 60px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    /* mix-blend-mode: difference; */
+
+    /* opacity: 0; */
+    visibility: hidden;
+    /* transform: translateY(20px); */
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s ease;
+
+}
+
+.back-to-top.visible {
+
+    visibility: visible;
+    /* transform: translateY(0); */
+}
+
+.back-to-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

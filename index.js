@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // On donne un décalage (delay) à chaque carte : 0s, 0.2s, 0.4s...
     articles.forEach((article, index) => {
-        article.style.transitionDelay = `${index * 0.2}s`; // Le JS fait le délai !
+        article.style.transitionDelay = `${index * 0.1}s`; // Le JS fait le délai !
         observer.observe(article);
     });
 });
@@ -44,3 +44,46 @@ backToTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// ---------------------------------------------------------
+// Gestion du formulaire (Envoi sans quitter la page)
+// ---------------------------------------------------------
+
+const form = document.querySelector("#contact form");
+const successMessage = document.getElementById("form-success");
+
+if (form) { // On vérifie qu'on est bien sur une page avec le formulaire
+    form.addEventListener("submit", function(event) {
+        // 1. On empêche la page de se recharger (on annule le comportement par défaut)
+        event.preventDefault(); 
+
+        // 2. On prépare les données du formulaire
+        const formData = new FormData(form);
+
+        // 3. On envoie à Formspree en arrière-plan (Fetch)
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json' // Indispensable pour que Formspree comprenne
+            }
+        })
+        .then(response => {
+            // 4. Si Formspree répond OK
+            if (response.ok) {
+                form.reset(); // MAGIE : Vide toutes les cases du formulaire
+                successMessage.style.display = "block"; // Affiche le message de succès
+                
+                // Optionnel : Cacher le message après 5 secondes
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 5000);
+            } else {
+                alert("Oups, il y a eu une erreur. Réessayez.");
+            }
+        })
+        .catch(error => {
+            alert("Erreur de connexion. Vérifiez votre internet.");
+        });
+    });
+}

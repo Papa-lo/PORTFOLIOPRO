@@ -1,0 +1,70 @@
+/* --- LE CONTENEUR DU FORMULAIRE --- */
+#contact {
+    max-width: 600px; /* Le formulaire ne sera jamais trop large */
+    margin: 50px auto; /* Centre le formulaire dans la page */
+    text-align: center;
+    padding: 30px;
+    background-color: white; /* Un joli fond blanc pour faire ressortir le formulaire */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#contact h2 {
+    font-family: "Tektur", sans-serif;
+    margin-top: 0;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+/* --- LES CASES (Inputs et Textarea) --- */
+.form-group input, 
+.form-group textarea {
+    width: 100%; /* Prend toute la largeur de la div .form-group */
+    padding: 15px; /* AGRANDIT LES CASES (haut/bas et gauche/droite) */
+    border: 1px solid #ccc; /* Bordure grise douce */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    font-family: "Tektur", sans-serif; /* Même police que le reste du site */
+    font-size: 1rem;
+    box-sizing: border-box; /* Oblige le padding à rester à l'intérieur de la largeur définie */
+    transition: border-color 0.3s ease;
+}
+
+/* --- ACCESSIBILITÉ : Ce qui se passe quand on clique dans une case --- */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none; /* Enlève le contour bleu moche par défaut de Windows/Chrome */
+    border-color: #004bca; /* Met la bordure de la case en bleu (ta couleur) */
+    box-shadow: 0 0 5px rgba(0, 75, 202, 0.3); /* Petit effet lumineux subtil */
+}
+
+/* --- LE BOUTON ENVOYER --- */
+.bouton-envoyer {
+    /* On réutilise les mêmes réglages que tes autres boutons ! */
+    font-family: "Tektur", sans-serif;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 40px; /* Plus large pour un bouton d'action */
+    font-size: 1rem;
+    font-weight: 600;
+    border: none; /* Enlève la bordure par défaut du bouton */
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-envoyer:hover {
+    background-color: #004bca; /* Devient bleu au survol */
+    transform: translateY(-2px); /* Se soulève légèrement */
+}
+
+#form-success {
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+
