@@ -1,5 +1,5 @@
 /*_________________________________Hero*/
-#hero {
+/* #hero {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -9,19 +9,39 @@
     grid-area: 1/1;
     width: 100%;
     height: auto;
+} */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: clamp(380px, 60vw, 750px);
+    overflow: hidden;
 }
 
-#slogan {/*________________________________________slogan*/
-    grid-area: 1/1;
-    text-align: center;
-    /* text-shadow: 2px 2px 4px rgba(0,0,0,1); */
-    color: white;
-    
+#hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
-    /*________________________________________anim slogan*/
+#slogan {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 2.5vw, 24px);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
     opacity: 0;
-    transform: translateY(50px);/*Décale de 30px vers le bas*/
-    animation: apparition 1s ease 0.2s forwards;/*Dure 1 sec., avec délai 0.3s pour laisser image charger*/
+    transform: translateY(50px);
+    animation: apparition 1s ease 0.2s forwards;
 }
 @keyframes apparition {
     to {
@@ -34,16 +54,15 @@
     font-family: "Tourney", sans-serif;
     font-weight: 300;
     font-size: clamp(2rem, 5vw, 4rem);
-    /* color: white; */
-    margin-top: 15%;
+    /* margin-top: 15%; */
+
 }
 
 #slogan p {
     font-family: "Tektur", sans-serif;
     font-weight: 700;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    /* color: white; */
-    margin-top: 9%;
+    /* margin-top: 9%; */
 }
 
 .btn-hero {

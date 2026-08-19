@@ -7,9 +7,6 @@ body {
     background-color: #f3f6f6;
     /* background-image: url(/images/crepis.webp); */
 }
-
-
-
 /*_________________________________Intro*/
 #intro {
     font-family: "Tektur", sans-serif;
@@ -30,21 +27,16 @@ body {
     line-height: 1.5;
 }
 /*_________________________________Contenu*/
-/* --- ANIMATION AU SCROLL --- */
-.anim {
+.anim {/*_______________Anim Scroll*/
     opacity: 0;
-    /* transform: translateY(40px); */
-    /* Prépare l'animation, mais n'attend pas de délai compliqué ici */
     transition: opacity 0.7s ease, transform 0.7s ease; 
 }
 
-/* Quand le JS ajoute la classe "visible", l'animation se lance */
-.anim.visible {
+.anim.visible {/*Quand JS ajoute class "visible", l'animation se lance*/
     opacity: 1;
     transform: translateY(0);
 }
 
-/* On garde ton effet de survol existant ! */
 .anim:hover {
     transform: translateY(-10px);
     /* transform: scale(-1.02); */
@@ -52,7 +44,7 @@ body {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-#expert, #artisan, #vu, #hote {
+#expert, #artisan, #vu, #commerce, #hote {
     margin: 50px 0;
 }
 
@@ -67,20 +59,11 @@ article {background-color: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-article:hover {
-    /* S'élève de 5 pixels vers le haut */
-    /* transform: translateY(-5px); */
-    /* Ombre portée qui s'agrandit */
-    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
-}
-
-
-
 article h2 {
   text-align: center;
   margin: 0 0 10px 0;
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
-  margin: 0 5% 5% 0;
+  margin: 0 0 5% 0;
 }
 
 article p {
@@ -89,11 +72,11 @@ article p {
     margin: 0 4%;
 }
 
-article img {/* --- Style uniforme images (portrait ou paysage) --- */
+article img {/*Style uniforme images (portrait ou paysage)*/
   height: clamp(200px, 40vw, 300px);
-  width: auto;/*La largeur s'ajuste au format (portrait ou paysage)*/
-  max-width: 100%;/* Sécurité pour ne pas dépasser du bloc */
-  object-fit: contain;/*Affiche l'image ENTIÈRE sans la rogner*/
+  width: auto;/*Largeur s'ajuste au format (portrait ou paysage)*/
+  max-width: 100%;/* Sécurité pour pas dépasser du bloc */
+  object-fit: contain;/*Affiche image ENTIÈRE sans rogner*/
   border-radius: 20px;
   margin: 5px;
 }
@@ -128,11 +111,10 @@ article a {
 
 article a:hover,
 article a:focus {
-  background-color: #004bca; /* Nuance légèrement plus sombre */
-  transform: translateY(-2px); /* Léger soulèvement */
+  background-color: #004bca;
+  transform: translateY(-2px);/*Léger soulèvement*/
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
-
 
 #localisation {/*_________________________________localisation*/
     font-family: "Tektur", sans-serif;
@@ -143,23 +125,22 @@ article a:focus {
 #localisation p {
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     max-width: 600px;
-    margin: 0 auto 20px auto; /* Centre le texte et met un espace sous le texte */
+    margin: 0 auto 20px auto; /*Centre texte et met espace sous texte*/
 }
 
 .carte-map {
-    max-width: 800px; /* La carte ne sera pas géante sur les très grands écrans */
-    margin: 0 auto; /* Centre la carte dans la section */
-    border-radius: 15px; /* Arrondit les bords de la carte */
-    overflow: hidden; /* Oblige la carte à respecter les bords arrondis */
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Un petit ombre discrète pour faire pro */
+    max-width: 800px;/*Carte pas géante sur très grands écrans*/
+    margin: 0 auto;/*Centre carte dans section*/
+    border-radius: 15px;
+    overflow: hidden;/*Oblige carte à respecter bords arrondis*/
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
-/* LA RÈGLE LA PLUS IMPORTANTE POUR LE MOBILE */
-.carte-map iframe {
-    width: 100%; /* Prend 100% de l'espace de son parent (.carte-map) */
-    height: 400px; /* Donne une belle hauteur à la carte */
-    border: 0; /* Enlève la bordure moche par défaut de Google */
-    display: block; /* Enlève un petit espace blanc parasite sous la carte */
+.carte-map iframe {/*RÈGLE PLUS IMPORTANTE CARTE SUR MOBILE*/
+    width: 100%;/*Prend 100% espace de parent (.carte-map)*/
+    height: 400px;/*Donne hauteur à carte*/
+    border: 0;/*Enlève bordure moche par défaut Google*/
+    display: block;/*Enlève espace blanc parasite sous carte*/
 }
 
 
@@ -171,7 +152,7 @@ article a:focus {
 
 
 
-@media (max-width: 767px) {/*______________________________RÈGLES MOBILE (< 768px)*/
+@media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (> 1024px)*/
   article, 
   .reverse {
     grid-template-columns: 1fr;/*Passage sur 1 colonne*/
@@ -180,7 +161,8 @@ article a:focus {
   article img, 
   .reverse img {
     order: 2;/*Force image à passer SOUS texte pour tous articles */
-    justify-self: center;/*Centre image horizontalement*/
+    /*Centre image horizontalement*/
+    justify-self: center;
   }
 }
 
