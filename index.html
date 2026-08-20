@@ -3,7 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AHLS-Web | Développeur Web à Saint Ciers sur Gironde</title>        
+        <title>Développeur Web Full-Stack en Gironde | AHLS-Web</title>
+        <meta name="description" content="AHLS-Web conçoit des sites web sur mesure, sites vitrines et applications métier pour artisans, commerçants, indépendants et petites entreprises en Gironde.">      
+        <link rel="canonical" href="https://ahls-web.netlify.app/">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- Open Graph -->
+        <meta property="og:title" content="AHLS-Web | Développeur Web Full-Stack en Gironde">
+        <meta property="og:description" content="Création de sites web sur mesure et applications métier pour artisans, commerçants, indépendants et petites entreprises.">
+        <meta property="og:url" content="https://ahls-web.netlify.app/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="AHLS-Web">
+        <meta property="og:locale" content="fr_FR">
+        <!-- <meta property="og:image" content="https://ahls-web.netlify.app/images/og-image.jpg"> -->
+        
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/hero.css">
@@ -12,6 +24,49 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Tektur:wght@400..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Données structurées -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://ahls-web.netlify.app/#website",
+                    "url": "https://ahls-web.netlify.app/",
+                    "name": "AHLS-Web",
+                    "alternateName": "AHLS Web-Solutions",
+                    "description": "Portfolio de Laurent AHLSWEH, développeur web Full-Stack spécialisé dans la création de sites web sur mesure et d'applications métier.",
+                    "publisher": {
+                        "@id": "https://ahls-web.netlify.app/#person"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://ahls-web.netlify.app/#person",
+                    "name": "Laurent AHLSWEH",
+                    "url": "https://ahls-web.netlify.app/",
+                    "jobTitle": "Développeur Web Full-Stack",
+                    "description": "Développeur Web Full-Stack spécialisé en React, Node.js, Express et MongoDB.",
+                    "knowsAbout": [
+                        "Développement web",
+                        "React",
+                        "Node.js",
+                        "Express",
+                        "MongoDB",
+                        "JavaScript",
+                        "Applications métier",
+                        "Sites vitrines"
+                    ],
+                    "sameAs": [
+                        "https://github.com/Papa-lo",
+                        "https://www.linkedin.com/in/laurent-ahlsweh-08a9ab329/"
+                    ]
+                }
+            ]
+        }
+        </script>
+
     </head>
     <body>
         <header id="body-header"><!-- HEADER -->
@@ -187,12 +242,24 @@
         </main>
 
         <footer id="body-footer">
-            <p>© 2026 AHLS-Web Solutions</p>
-            <p>Basé à Saint Ciers sur Gironde (33)</p>
-            <p>Développeur Web & Accompagnement Numérique</p>
-            <p><a href="legal/mentions-legales.html">Mentions légales</a></p>
-            <p><a href="legal/cgv.html">CGV</a></p>
-            <p><a href="legal/politique-confidentialite.html">Confidentialité</a></p>
+            <section>
+                <p>© 2026 AHLS-Web</p>
+                <p>Basé à Saint Ciers sur Gironde (33)</p>
+                <p>Développeur Web & Accompagnement Numérique</p>
+            </section>
+            <section>
+                <p><a href="legal/mentions-legales.html">Mentions légales</a></p>
+                <p><a href="legal/cgv.html">CGV</a></p>
+                <p><a href="legal/politique-confidentialite.html">Confidentialité</a></p>
+            </section>
+            <nav>
+                <ul>
+                    <!-- <li><a href="#localisation">Rencontrez-moi</a></li> -->
+                    <li><a href="index.html">Accueil</a></li> 
+                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </footer>
 
 

@@ -4,14 +4,14 @@ html {
 
 body {
     margin: 0;
-    background-color: #f3f6f6;
+    background-color: #F8F9FA;
     /* background-image: url(/images/crepis.webp); */
 }
 
 /*_________________________________Entete*/
 #body-header {
     font-family: "Tektur", sans-serif;
-    background-color: black;
+    background-color: #0F172A;
     color: white;
     display: flex;
     flex-direction: row;
@@ -58,19 +58,33 @@ body {
 }
 
 #body-header a:hover {
-    color: #004bca;
+    color: #2563EB;
 }
 
-#body-footer {/*_____________footer*/
+#body-footer {/*_______________________________________footer*/
+    font-family: "Tektur", sans-serif;
     background-color: black;
     color: white;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
 }
 
 #body-footer p {
     margin: 0;
 }
 
-.legal-page {
+#body-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#body-footer li {
+    list-style-type: none;
+}
+
+.legal-page {/*_______________________________________legal*/
     font-family: "Tektur", sans-serif;
 }
 

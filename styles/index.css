@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #f3f6f6;
+    background-color: #F8F9FA;
     /* background-image: url(/images/crepis.webp); */
 }
 /*_________________________________Intro*/
@@ -90,6 +90,7 @@ article img {/*Style uniforme images (portrait ou paysage)*/
 
 article footer {
     text-align: center;
+    padding: 15px 0 25px 0;
 }
 
 article a {
@@ -111,7 +112,8 @@ article a {
 
 article a:hover,
 article a:focus {
-  background-color: #004bca;
+  background-color: #0F172A;
+  color: white;
   transform: translateY(-2px);/*Léger soulèvement*/
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
@@ -160,9 +162,13 @@ article a:focus {
 
   article img, 
   .reverse img {
-    order: 2;/*Force image à passer SOUS texte pour tous articles */
+    /*Force image à passer SOUS texte pour tous articles */
+    order: -1;   /* garantit "avant" quel que soit l'ordre du HTML */
     /*Centre image horizontalement*/
-    justify-self: center;
+    width: calc(100% - 10px);
+    height: auto;
+    justify-self: stretch;
+    margin: 5px auto;
   }
 }
 

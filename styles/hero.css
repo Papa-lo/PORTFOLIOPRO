@@ -83,7 +83,7 @@
 
 .btn-hero:hover,
 .btn-hero:focus {
-  background-color: #004bca; /* Nuance légèrement plus sombre */
+  background-color: #0F172A; /* Nuance légèrement plus sombre */
   color: white;
   transform: translateY(-2px); /* Léger soulèvement */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);

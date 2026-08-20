@@ -115,3 +115,17 @@ body {
     height: 100%;
     object-fit: contain;
 }
+
+
+@media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (> 1024px)*/
+
+    #Ap-intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Ap-intro img {
+        height: auto;
+    }
+
+}
