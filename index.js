@@ -1,26 +1,46 @@
 // ---------------------------------------------------------
 // Animation au scroll
 // ---------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
     
+//     const articles = document.querySelectorAll(".anim");
+
+//     const observer = new IntersectionObserver((elements) => {
+        
+//         elements.forEach((element) => {
+//             if (element.isIntersecting) {
+//                 element.target.classList.add("visible");
+//                 observer.unobserve(element.target);
+//             }
+//         });
+        
+//     }, {
+//         threshold: 0.2 
+//     });
+
+//     // On donne un décalage (delay) à chaque carte : 0s, 0.2s, 0.4s...
+//     articles.forEach((article, index) => {
+//         article.style.transitionDelay = `${index * 0.1}s`; // Le JS fait le délai !
+//         observer.observe(article);
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
     const articles = document.querySelectorAll(".anim");
 
     const observer = new IntersectionObserver((elements) => {
-        
         elements.forEach((element) => {
             if (element.isIntersecting) {
                 element.target.classList.add("visible");
                 observer.unobserve(element.target);
             }
         });
-        
     }, {
-        threshold: 0.2 
+        threshold: 0.1
     });
 
-    // On donne un décalage (delay) à chaque carte : 0s, 0.2s, 0.4s...
-    articles.forEach((article, index) => {
-        article.style.transitionDelay = `${index * 0.1}s`; // Le JS fait le délai !
+    articles.forEach((article) => {
+        // Aucun transitionDelay : affichage immédiat et fluide !
         observer.observe(article);
     });
 });
@@ -87,3 +107,27 @@ if (form) { // On vérifie qu'on est bien sur une page avec le formulaire
         });
     });
 }
+
+// ---------------------------------------------------------
+// Menu HAMBURGER sur mobile
+// ---------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    // Affiche / masque le menu
+    navMenu.classList.toggle("active");
+    
+    // (Optionnel) Animation de transformation du bouton en 'X'
+    hamburger.classList.toggle("open");
+  });
+
+  // Ferme le menu quand on clique sur un lien
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+});

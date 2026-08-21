@@ -125,7 +125,9 @@ body {
     }
 
     #Ap-intro img {
+        width: 35%;
         height: auto;
+        margin: auto;
     }
 
 }
