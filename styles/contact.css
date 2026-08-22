@@ -7,6 +7,7 @@
     background-color: white; /* Un joli fond blanc pour faire ressortir le formulaire */
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 80px;
 }
 
 #contact h2 {

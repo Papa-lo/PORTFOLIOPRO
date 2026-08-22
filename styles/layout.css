@@ -52,6 +52,10 @@ body {
     gap: 20px;
 }
 
+.nav-icon {
+    display: none;
+}
+
 #body-header a {
     text-decoration: none;
     color: white;
@@ -60,9 +64,9 @@ body {
 #body-header a:hover {
     color: #2563EB;
 }
-
-.hamburger {
-  display: none; /* Caché sur ordinateur */
+/*_______________________________________hamburger*/
+/* .hamburger {
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -73,32 +77,37 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #1E293B; /* Couleur des barres */
+  background-color: white;
   border-radius: 2px;
   transition: all 0.3s ease;
-}
+} */
 
 #body-footer {/*_______________________________________footer*/
     font-family: "Tektur", sans-serif;
     background-color: black;
     color: white;
-    padding: 20px 10px;
+    padding: 0 10px;
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
 }
 
-#body-footer p {
-    margin: 0;
+#body-footer img {
+    height: clamp(20px, 15vw, 65px);
 }
+
+/* #body-footer p {
+    margin: 5px;
+} */
+
+
+/* #body-footer li {
+    list-style-type: none;
+} */
 
 #body-footer a {
     color: white;
     text-decoration: none;
-}
-
-#body-footer li {
-    list-style-type: none;
 }
 
 .legal-page {/*_______________________________________legal*/
@@ -148,71 +157,58 @@ body {
 
 
 /* ______________________________________________________________hamburger Mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Visible sur mobile */
+
+/* ______________________________________________________________Icones Mobile */
+
+@media (max-width: 550px) {
+  
+  /* On masque le texte des liens */
+  .nav-text {
+    display: none;
   }
 
-  .nav-menu {
-    position: fixed;
-    top: 80px; /* Hauteur sous votre header */
-    right: -100%; /* Masqué hors de l'écran à droite */
-    width: 80px;
-    height: auto;
-    max-height: 80vh;
-    /* background-color: #F8F9FA; */
-    transition: right 0.3s ease;
-
-    background-color: rgba(15, 23, 42, 0.4); /* Bleu nuit semi-transparent */
-    /* Effet verre dépoli */
-    backdrop-filter: blur(12px);              
-    -webkit-backdrop-filter: blur(12px);
-
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Liseré très discret */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    
-    /* Marge par rapport au bord de l'écran */
-    margin-right: 15px; 
-    padding: 30px 20px;
-    
-    z-index: 9999;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Animation ultra fluide */
+  /* On affiche les icônes */
+  .nav-icon {
+    display: block;
+    width: clamp(18px, 5vw, 24px);
+    height: clamp(18px, 5vw, 24px);
+    object-fit: contain;
+    pointer-events: none;
   }
 
-  .nav-menu.active {
-    right: 0; /* Fait glisser le menu dans l'écran */
-  }
-
+  /* Alignement propre des icônes en ligne */
   .nav-menu ul {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
   }
 
+  /* Agrandit la zone cliquable autour des icônes */
   .nav-menu a {
-    color: #F8F9FA; /* Texte clair très lisible */
-    font-size: 1.05rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    /* padding: 8px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  /*__________________________footer mobile*/
 
+  #body-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-  /* Animation du bouton Hamburger en Croix */
-.hamburger.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  #body-footer section {
+    /* border-bottom: solid 1px white; */
+  }
+
+  #body-footer img {
+    height: clamp(20px, 15vw, 65px);
+    /* border-bottom: solid 1px white; */
+    margin: 15px auto;
+    }
+
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0; /* La barre du milieu disparaît */
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-}
