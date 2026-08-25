@@ -1,4 +1,4 @@
-/* --- LE CONTENEUR DU FORMULAIRE --- */
+/*___________________________________________________CONTENEUR FORMULAIRE*/
 #contact {
     max-width: 600px; /* Le formulaire ne sera jamais trop large */
     margin: 50px auto; /* Centre le formulaire dans la page */
@@ -13,13 +13,14 @@
 #contact h2 {
     font-family: "Tektur", sans-serif;
     margin-top: 0;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 500;
 }
 
 .form-group {
     margin: 15px 0;
 }
-
-/* --- LES CASES (Inputs et Textarea) --- */
+/*__________________________________________________________________CASES*/
 .form-group input, 
 .form-group textarea {
     width: 100%; /* Prend toute la largeur de la div .form-group */
@@ -31,36 +32,36 @@
     box-sizing: border-box; /* Oblige le padding à rester à l'intérieur de la largeur définie */
     transition: border-color 0.3s ease;
 }
-
-/* --- ACCESSIBILITÉ : Ce qui se passe quand on clique dans une case --- */
+/*__________________________________________________________ACCESSIBILITÉ*/
+/*Ce qui se passe quand on clique dans une case*/
 .form-group input:focus, 
 .form-group textarea:focus {
-    outline: none; /* Enlève le contour bleu moche par défaut de Windows/Chrome */
-    border-color: #004bca; /* Met la bordure de la case en bleu (ta couleur) */
-    box-shadow: 0 0 5px rgba(0, 75, 202, 0.3); /* Petit effet lumineux subtil */
+    outline: none;/*Enlève contour bleu moche par défaut Windows/Chrome*/
+    border-color: #004bca;/*Met bordure case en bleu*/
+    box-shadow: 0 0 5px rgba(0, 75, 202, 0.3);/*Effet lumineux*/
 }
-
-/* --- LE BOUTON ENVOYER --- */
+/*__________________________________________________________BOUTON ENVOI*/
 .bouton-envoyer {
-    /* On réutilise les mêmes réglages que tes autres boutons ! */
     font-family: "Tektur", sans-serif;
-    color: white;
-    background-color: black;
+    color: #0F172A;
+    background-color: #F8F9FA;
     text-decoration: none;
     display: inline-block;
-    padding: 12px 40px; /* Plus large pour un bouton d'action */
+    padding: 12px 40px;
     font-size: 1rem;
     font-weight: 600;
-    border: none; /* Enlève la bordure par défaut du bouton */
-    border-radius: 25px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .bouton-envoyer:hover {
-    background-color: #004bca; /* Devient bleu au survol */
-    transform: translateY(-2px); /* Se soulève légèrement */
+    background-color: #0F172A;
+    color: #F8F9FA;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    /* transform: translateY(-2px); */
 }
 
 #form-success {

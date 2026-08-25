@@ -1,0 +1,22 @@
+#mes-chantiers {
+    font-family: "Tektur", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mes-chantiers img {
+    max-width: 100%;
+}
+
+h2, h3 {
+    text-align: center;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 100;
+}
+
+#chan-par {
+    max-width: 800px;
+    margin: 0 auto;
+}
+

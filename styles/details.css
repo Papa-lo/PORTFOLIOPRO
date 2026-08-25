@@ -1,6 +1,6 @@
 .page-detail {/*______________________________Style pages détails articles*/
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
     line-height: 1.6;
@@ -15,3 +15,42 @@
 .page-detail li {
     margin-bottom: 10px;
 }
+
+.page-detail a {
+    margin-bottom: 30px;
+}
+
+/*______________________________ANIM Tombe sur 3 images*/
+/* .illust {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 35px;
+}
+
+.illust img {
+    width: 30%;
+    object-fit: cover;
+    animation: tombe 0.8s ease-out forwards; 
+    opacity: 0;
+}
+
+.illust img:nth-child(1) {
+  animation-delay: 0s;
+}
+.illust img:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.illust img:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes tombe {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */

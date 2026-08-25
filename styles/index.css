@@ -1,22 +1,4 @@
-/*#F8F9FA (Blanc cassé / Gris très clair)*/
-/*#1E293B (Ardoise sombre / Dark Slate)*/
-/*#0F172A (Bleu Nuit / Deep Navy)*/
-/*#2563EB (Bleu Électrique / Cobalt)*/
-/*#D97706 (Ocre / Ambre)*/
-/*#059669 (Vert Sauge)*/
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    /*Blanc Gris*/
-    background-color: #F8F9FA;
-    /* background-image: url(/images/crepis.webp); */
-}
-/*_________________________________Intro*/
+/*__________________________________________________________________Intro*/
 #intro {
     font-family: "Tektur", sans-serif;
     
@@ -24,7 +6,8 @@ body {
 
 #intro h2 {
     text-align: center;
-    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 600;
 }
 
 #intro p {
@@ -35,35 +18,32 @@ body {
     font-size: clamp(0.85rem, 1.1vw, 1.6rem);
     line-height: 1.5;
 }
-/*_________________________________Contenu*/
+/*_______________________________________________________________Articles*/
+
 .anim {/*_______________Anim Scroll*/
-    /* opacity: 0;
-    transition: opacity 0.7s ease, transform 0.7s ease;  */
     opacity: 0;
-
-  opacity: 0;
-  transform: translateX(-200px); /* Arrive par la gauche */
-  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
-  will-change: opacity, transform;/*indique au navigateur d'utiliser la carte graphique*/
+    transform: translateX(-300px); /* Arrive par la gauche */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    will-change: opacity, transform;/*indique au navigateur d'utiliser la carte graphique*/
 }
-
-.anim.visible {/*Quand JS ajoute class "visible", l'animation se lance*/
-    /* opacity: 1; */
-    /* transform: translateY(0); */
-
+.reverse {
+    opacity: 0;
+    transform: translateX(300px); /* Arrive par la gauche */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    will-change: opacity, transform;
+}
+.visible {/*Quand JS ajoute class "visible", l'animation se lance*/
     opacity: 1;
-  transform: translateX(0);
-}
+    transform: translateX(0);
+}/*________________________________*/
 
 .anim:hover {
-    /* transform: translateY(-10px); */
-    /* transform: scale(-1.02); */
     transform: scale(1.02);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 #expert, #artisan, #vu, #commerce, #hote {
-    margin: 50px 0;
+    margin: 50px 0 0 0;
 }
 
 article {background-color: white;
@@ -73,15 +53,14 @@ article {background-color: white;
     gap: 10px;
     margin: 20px;
     align-items: center;
-    /* border-radius: 20px; */
-    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35); */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-article h2 {
-  text-align: center;
-  margin: 0 0 10px 0;
-  font-size: clamp(1.2rem, 2.2vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
-  margin: 0 0 5% 0;
+article h2, h3 {
+    text-align: center;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
+    margin: 0 0 2.5% 0;
+    font-weight: 500;
 }
 
 article p {
@@ -91,12 +70,11 @@ article p {
 }
 
 article img {/*Style uniforme images (portrait ou paysage)*/
-  height: clamp(200px, 40vw, 300px);
-  width: auto;/*Largeur s'ajuste au format (portrait ou paysage)*/
-  max-width: 100%;/* Sécurité pour pas dépasser du bloc */
-  object-fit: contain;/*Affiche image ENTIÈRE sans rogner*/
-  /* border-radius: 20px; */
-  margin: 5px;
+    height: clamp(200px, 40vw, 300px);
+    width: auto;/*Largeur s'ajuste au format (portrait ou paysage)*/
+    max-width: 100%;/* Sécurité pour pas dépasser du bloc */
+    object-fit: contain;/*Affiche image ENTIÈRE sans rogner*/
+    margin: 5px;
 }
 
 .reverse {
@@ -110,42 +88,22 @@ article footer {
     text-align: center;
     padding: 15px 0 25px 0;
 }
-
-article a {
-    text-align: center;
-    font-family: "Tektur", sans-serif;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: white;
-    color: black;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    animation: pulse-subtle 2.5s infinite ease-in-out;
-}
-
-article a:hover,
-article a:focus {
-  background-color: #0F172A;
-  color: white;
-  transform: translateY(-2px);/*Léger soulèvement*/
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-#localisation {/*_________________________________localisation*/
+/*___________________________________________________________localisation*/
+#localisation {
     font-family: "Tektur", sans-serif;
     text-align: center;
     padding: 40px 20px;
 }
 
+#localisation h2 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 500;
+}
+
 #localisation p {
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     max-width: 600px;
-    margin: 0 auto 20px auto; /*Centre texte et met espace sous texte*/
+    margin: 0 auto 20px auto;
 }
 
 .carte-map {
@@ -153,7 +111,7 @@ article a:focus {
     margin: 0 auto;/*Centre carte dans section*/
     border-radius: 15px;
     overflow: hidden;/*Oblige carte à respecter bords arrondis*/
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .carte-map iframe {/*RÈGLE PLUS IMPORTANTE CARTE SUR MOBILE*/
@@ -162,32 +120,63 @@ article a:focus {
     border: 0;/*Enlève bordure moche par défaut Google*/
     display: block;/*Enlève espace blanc parasite sous carte*/
 }
+/*_________________________________________________________________TARIFS*/
+#tarifs {
+    font-family: "Tektur", sans-serif;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#tarifs article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#tarifs .tar-cont {
+    margin: 0 15px;
+}
+
+#tarifs ul {
+    list-style-type: circle;
+    text-align: left;
+}
+
+/* #tarifs article {border: solid red;
+    display: flex;
+    justify-content: space-between;
+} */
 
 
+/*___________________________________RÈGLES MOBILE & TABLETTES (> 1024px)*/
+@media (max-width: 1024px) {
+    article, 
+    .reverse {
+        grid-template-columns: 1fr;/*Passage sur 1 colonne*/
+    }
 
+    article img, 
+    .reverse img {/*Force image à passer SOUS texte pour tout articles */
+        order: -1;   /* garantit "avant" quel que soit ordre HTML */
+        /*Centre image horizontalement*/
+        width: calc(100% - 10px);
+        height: auto;
+        justify-self: stretch;
+        margin: 5px auto;
+    }
 
+    #tarifs {
+        width: 98%;
+    }
 
+    #tarifs article {
+        display: flex;
+        flex-direction: column;
+    }
 
-
-
-
-
-@media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (> 1024px)*/
-  article, 
-  .reverse {
-    grid-template-columns: 1fr;/*Passage sur 1 colonne*/
-  }
-
-  article img, 
-  .reverse img {
-    /*Force image à passer SOUS texte pour tous articles */
-    order: -1;   /* garantit "avant" quel que soit l'ordre du HTML */
-    /*Centre image horizontalement*/
-    width: calc(100% - 10px);
-    height: auto;
-    justify-self: stretch;
-    margin: 5px auto;
-  }
+    #tarifs h2 {
+        margin-top: 5%;
+    }
 }
 
 

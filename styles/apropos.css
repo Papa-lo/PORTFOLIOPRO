@@ -1,65 +1,16 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Tektur", sans-serif;
-    margin: 0;
-    background-color: #f3f6f6;
-}
-
-/*_________________________________Entete*/
-#body-header {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid 1px white;
-    padding: 2% 3%;
-    font-size: 0.9rem;
-
-    position: sticky; /* Dit au header de se coller quand on scroll */
-    top: 0;           /* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
-    z-index: 100;     /* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
-}
-
-#left {
-    text-align: center;
-}
-
-#body-header p {
-    margin: 0;
-}
-
-#body-header ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-#body-header a {
-    text-decoration: none;
-    color: white;
-}
-
-#body-header a:hover {
-    color: #004bca;
-}
 /*_________________________________Moi*/
 #moi {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
     line-height: 1.6;
 }
 
-#Ap-title {
+h2, h3 {
     text-align: center;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 100;
 }
 
 #Ap-intro {
@@ -69,53 +20,12 @@ body {
 }
 
 #Ap-intro p {
-    margin: 0 4%;
+    margin: 0;
 }
 
 #Ap-intro img {
     height: clamp(200px, 40vw, 300px);
 }
-
-.back-to-top {/*______________________________BOUTON BACK TO TOP*/
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    /* z-index: 1000; */
-
-    width: 60px;
-    height: 60px;
-
-    padding: 0;
-    border: none;
-    background: transparent;
-
-    cursor: pointer;
-
-    /* mix-blend-mode: difference; */
-
-    /* opacity: 0; */
-    visibility: hidden;
-    /* transform: translateY(20px); */
-
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease,
-        visibility 0.5s ease;
-
-}
-
-.back-to-top.visible {
-
-    visibility: visible;
-    /* transform: translateY(0); */
-}
-
-.back-to-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 
 @media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (> 1024px)*/
 
@@ -124,11 +34,8 @@ body {
         flex-direction: column;
     }
 
-    #Ap-intro img {
-        width: 35%;
-        height: auto;
+    #Ap-intro a {
         margin: auto;
     }
-
 }
 

@@ -5,10 +5,9 @@ html {
 body {
     margin: 0;
     background-color: #F8F9FA;
-    /* background-image: url(/images/crepis.webp); */
 }
 
-/*_________________________________Entete*/
+/*_________________________________________________________________Entete*/
 #body-header {
     font-family: "Tektur", sans-serif;
     background-color: #0F172A;
@@ -20,10 +19,9 @@ body {
     border-bottom: solid 1px white;
     padding: 1% 3%;
     font-size: 0.9rem;
-
-    position: sticky; /* Dit au header de se coller quand on scroll */
-    top: 0;           /* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
-    z-index: 100;     /* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
+    position: sticky;/* Dit au header de se coller quand on scroll*/
+    top: 0;/* Dit à quelle distance du haut de l'écran il doit se coller (ici : tout en haut) */
+    z-index: 100;/* S'assure que le header reste TOUJOURS AU-DESSUS du reste du contenu quand on scroll */
 }
 
 #left {
@@ -32,8 +30,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* font-size: clamp(1rem, 5vw, 2rem); */
-
 }
 
 #left img {
@@ -49,7 +45,7 @@ body {
     padding: 0;
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-icon {
@@ -61,28 +57,38 @@ body {
     color: white;
 }
 
-#body-header a:hover {
+#body-header a:hover,
+#body-header a.actif {
     color: #2563EB;
 }
-/*_______________________________________hamburger*/
-/* .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
+
+/*________________________________________________________________Boutons*/
+.btn {
+    text-align: center;
+    font-family: "Tektur", sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0F172A;
+    color: #F8F9FA;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-} */
-
-#body-footer {/*_______________________________________footer*/
+.btn:hover,
+.btn:focus {
+    background-color: #F8F9FA;
+    color: #0F172A;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    animation-play-state: paused;/*Bloque animation*/
+}
+/*_________________________________________________________________footer*/
+#body-footer {
     font-family: "Tektur", sans-serif;
     background-color: black;
     color: white;
@@ -96,56 +102,43 @@ body {
     height: clamp(20px, 15vw, 65px);
 }
 
-/* #body-footer p {
-    margin: 5px;
-} */
-
-
-/* #body-footer li {
-    list-style-type: none;
-} */
-
 #body-footer a {
     color: white;
     text-decoration: none;
 }
 
-.legal-page {/*_______________________________________legal*/
-    font-family: "Tektur", sans-serif;
+#body-footer a:hover,
+#body-footer a.actif {
+    color: #2563EB;
 }
-
-.back-to-top {/*______________________________BOUTON BACK TO TOP*/
+/*__________________________________________________________________legal*/
+.legal-page {
+    font-family: "Tektur", sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+/*_____________________________________________________BOUTON BACK TO TOP*/
+.back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 1000;
-
     width: 60px;
     height: 60px;
-
     padding: 0;
     border: none;
     background: transparent;
-
     cursor: pointer;
-
     /* mix-blend-mode: difference; */
-
-    /* opacity: 0; */
     visibility: hidden;
-    /* transform: translateY(20px); */
-
     transition:
         opacity 0.5s ease,
         transform 0.5s ease,
         visibility 0.5s ease;
-
 }
 
 .back-to-top.visible {
-
     visibility: visible;
-    /* transform: translateY(0); */
 }
 
 .back-to-top img {
@@ -154,61 +147,44 @@ body {
     object-fit: contain;
 }
 
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+/* ________________________________________________________Icones Mobile */
+@media (max-width: 550px) {  
+    .nav-text {/*Masque texte liens */
+        display: none;
+    }
 
+    .nav-icon {/*Affiche icônes */
+        display: block;
+        width: clamp(18px, 5vw, 24px);
+        height: clamp(18px, 5vw, 24px);
+        object-fit: contain;
+        pointer-events: none;
+    }
 
-/* ______________________________________________________________hamburger Mobile */
+    .nav-menu ul {/* Alignement icônes en ligne */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
 
-/* ______________________________________________________________Icones Mobile */
-
-@media (max-width: 550px) {
-  
-  /* On masque le texte des liens */
-  .nav-text {
-    display: none;
-  }
-
-  /* On affiche les icônes */
-  .nav-icon {
-    display: block;
-    width: clamp(18px, 5vw, 24px);
-    height: clamp(18px, 5vw, 24px);
-    object-fit: contain;
-    pointer-events: none;
-  }
-
-  /* Alignement propre des icônes en ligne */
-  .nav-menu ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* Agrandit la zone cliquable autour des icônes */
-  .nav-menu a {
-    /* padding: 8px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /*__________________________footer mobile*/
-
+    .nav-menu a {/*Agrandit zone cliquable autour icônes ?*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*______________________________________________________footer mobile*/
   #body-footer {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-
-  #body-footer section {
-    /* border-bottom: solid 1px white; */
-  }
-
   #body-footer img {
     height: clamp(20px, 15vw, 65px);
-    /* border-bottom: solid 1px white; */
     margin: 15px auto;
     }
-
 }
 
