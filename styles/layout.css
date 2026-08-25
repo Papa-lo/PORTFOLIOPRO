@@ -1,3 +1,9 @@
+/*Mes couleurs
+blanc-gris : #F8F9FA
+bleu nuit : #0F172A
+bleu elec : #2563EB
+*/
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,6 +11,7 @@ html {
 body {
     margin: 0;
     background-color: #F8F9FA;
+    overflow-x: hidden;/*pour cacher ce qui va arriver par le coté*/
 }
 
 /*_________________________________________________________________Entete*/
