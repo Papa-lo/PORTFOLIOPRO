@@ -14,8 +14,8 @@
 #contact h2 {
     font-family: "Tektur", sans-serif;
     margin-top: 0;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
 }
 
 .form-group {
@@ -54,14 +54,15 @@
     border: solid 1px #62b8ff;
     /* border-radius: 20px; */
     cursor: pointer;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
 }
 
 .bouton-envoyer:hover {
     background-color: #62b8ff;
     color: #0F172A;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35); */
     /* transform: translateY(-2px); */
 }
 

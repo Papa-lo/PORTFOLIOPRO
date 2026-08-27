@@ -93,12 +93,15 @@
 @keyframes pulse-subtle {/*___________________boutons*/
     0% {
         transform: scale(0.95);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.30);
     }
     50% {/*Aggrandissement(+5%)*/
-        transform: scale(1.05); 
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30); 
     }
     100% {
         transform: scale(0.95);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.30);
     }
 }
 

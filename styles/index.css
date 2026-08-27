@@ -6,8 +6,8 @@
 
 #intro h2 {
     text-align: center;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
 }
 
 #intro p {
@@ -18,6 +18,7 @@
     font-size: clamp(0.85rem, 1.1vw, 1.6rem);
     line-height: 1.5;
 }
+
 /*_______________________________________________________________Articles*/
 
 .anim {/*_______________Anim Scroll*/
@@ -58,7 +59,7 @@ article {background-color: white;
 
 article h2, h3 {
     text-align: center;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
+    font-size: clamp(1.5rem, 4vw, 2rem);/*Min: 1.2rem, Max: 1.8rem*/
     margin: 0 0 2.5% 0;
     font-weight: 500;
 }
@@ -96,8 +97,8 @@ article footer {
 }
 
 #localisation h2 {
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
 }
 
 #localisation p {
