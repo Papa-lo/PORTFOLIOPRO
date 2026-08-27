@@ -1,7 +1,7 @@
 /*Mes couleurs
 blanc-gris : #F8F9FA
 bleu nuit : #0F172A
-bleu elec : #2563EB
+bleu elec : #62b8ff
 */
 
 html {
@@ -18,12 +18,12 @@ body {
 #body-header {
     font-family: "Tektur", sans-serif;
     background-color: #0F172A;
-    color: white;
+    color: #F8F9FA;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #F8F9FA;
     padding: 1% 3%;
     font-size: 0.9rem;
     position: sticky;/* Dit au header de se coller quand on scroll*/
@@ -61,35 +61,36 @@ body {
 
 #body-header a {
     text-decoration: none;
-    color: white;
+    color: #F8F9FA;
 }
 
 #body-header a:hover,
 #body-header a.actif {
-    color: #2563EB;
+    color: #62b8ff;
 }
 
 /*________________________________________________________________Boutons*/
 .btn {
-    text-align: center;
-    font-family: "Tektur", sans-serif;
+    /* text-align: center; */
+    /* font-family: "Tektur", sans-serif; */
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0F172A;
-    color: #F8F9FA;
-    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #62b8ff;
+    color: #0F172A;
+    /* font-size: 1rem; */
     font-weight: 600;
-    border-radius: 20px;
-    opacity: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    /* border-radius: 20px; */
+    /* opacity: 0; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); */
+    /* transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; */
     animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
 }
 
 .btn:hover,
 .btn:focus {
-    background-color: #F8F9FA;
+    background-color: #62b8ff;
     color: #0F172A;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     animation-play-state: paused;/*Bloque animation*/
@@ -97,8 +98,8 @@ body {
 /*_________________________________________________________________footer*/
 #body-footer {
     font-family: "Tektur", sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #0F172A;
+    color: #F8F9FA;
     padding: 0 10px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -110,13 +111,13 @@ body {
 }
 
 #body-footer a {
-    color: white;
+    color: #F8F9FA;
     text-decoration: none;
 }
 
 #body-footer a:hover,
 #body-footer a.actif {
-    color: #2563EB;
+    color: #62b8ff;
 }
 /*__________________________________________________________________legal*/
 .legal-page {

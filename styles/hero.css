@@ -65,27 +65,27 @@
 }
 
 /*________________________________________________________________Boutons*/
-.btn-hero {
-    text-align: center;
+.btn-hero {border: 1px solid #62b8ff;
+    /* text-align: center; */
     font-family: "Tektur", sans-serif;
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
-    background-color: white;
-    color: black;
-    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    /* font-size: 1rem; */
     font-weight: 600;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     opacity: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
 }
 
 .btn-hero:hover,
 .btn-hero:focus {
-    background-color: #0F172A;
-    color: white;
+    background-color: #62b8ff;
+    color: #0F172A;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     animation-play-state: paused;/*Bloque animation*/
 }
@@ -126,7 +126,7 @@
     .btn-hero {
         font-size: 0.7rem;
         padding: 6px 12px;
-        border-radius: 12px;
+        /* border-radius: 12px; */
     }
 
 }

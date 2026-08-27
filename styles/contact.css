@@ -1,11 +1,12 @@
 /*___________________________________________________CONTENEUR FORMULAIRE*/
 #contact {
+    font-family: "Tektur", sans-serif;
     max-width: 600px; /* Le formulaire ne sera jamais trop large */
     margin: 50px auto; /* Centre le formulaire dans la page */
     text-align: center;
     padding: 30px;
     background-color: white; /* Un joli fond blanc pour faire ressortir le formulaire */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
     scroll-margin-top: 80px;
 }
@@ -47,19 +48,19 @@
     background-color: #F8F9FA;
     text-decoration: none;
     display: inline-block;
-    padding: 12px 40px;
-    font-size: 1rem;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
     font-weight: 600;
-    border: none;
-    border-radius: 20px;
+    border: solid 1px #62b8ff;
+    /* border-radius: 20px; */
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .bouton-envoyer:hover {
-    background-color: #0F172A;
-    color: #F8F9FA;
+    background-color: #62b8ff;
+    color: #0F172A;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
     /* transform: translateY(-2px); */
 }

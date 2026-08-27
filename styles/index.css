@@ -120,8 +120,8 @@ article footer {
     border: 0;/*Enlève bordure moche par défaut Google*/
     display: block;/*Enlève espace blanc parasite sous carte*/
 }
-/*_________________________________________________________________TARIFS*/
-#tarifs {
+/*_________________________________________________________________TARIFS AVANT*/
+/* #tarifs {
     font-family: "Tektur", sans-serif;
     text-align: center;
     background-color: #0F172A;
@@ -156,15 +156,281 @@ article footer {
 #tarifs ul {
     list-style-type: circle;
     text-align: left;
-}
-
-/* #tarifs article {border: solid red;
-    display: flex;
-    justify-content: space-between;
 } */
 
+/*__________________________________________________NVX__TARIFS*/
 
-/*___________________________________RÈGLES MOBILE & TABLETTES (> 1024px)*/
+
+/* ================================
+   TARIFS
+================================ */
+
+.tarifs {
+    font-family: "Tektur", sans-serif;
+    padding: 80px 6%;
+    background: #020b18;
+    color: white;
+}
+
+.tarifs-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.tarifs-intro h2 {
+    margin-bottom: 25px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.tarifs-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.tarif-principal {/* Bloc principal */
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 1px solid rgba(80, 170, 255, 0.35);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tarif-header {/* En-tête du tarif */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 35px 40px;
+    border-bottom: 1px solid rgba(80, 170, 255, 0.25);
+}
+
+.tarif-header h3 {
+    margin: 0;
+    font-family: "Tektur", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.tarif-prix {
+    margin: 0;
+    font-family: "Tektur", sans-serif;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.tarif-prix strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #62b8ff;
+}
+
+.tarif-contenu {/* Les 4 domaines */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tarif-bloc {
+    padding: 35px 40px;
+}
+
+.tarif-bloc:nth-child(odd) {
+    border-right: 1px solid rgba(80, 170, 255, 0.2);
+}
+
+.tarif-bloc:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(80, 170, 255, 0.2);
+}
+
+.tarif-bloc h4 {
+    margin: 0 0 20px;
+    font-family: "Tektur", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.tarif-bloc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tarif-bloc li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.tarif-bloc li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #62b8ff;
+}
+
+.tarif-delai {/* Délai */
+    padding: 25px 40px;
+    border-top: 1px solid rgba(80, 170, 255, 0.2);
+    text-align: center;
+}
+
+.tarif-delai strong {
+    font-family: "Tektur", sans-serif;
+    font-weight: 500;
+}
+
+.tarif-delai p {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.tarif-propriete,/* Blocs complémentaires */
+.tarif-proprietaire,
+.tarif-apres,
+.tarif-contact {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 35px 40px;
+    border-left: 2px solid #62b8ff;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.tarif-propriete h3,
+.tarif-proprietaire h3,
+.tarif-apres h3,
+.tarif-contact h3 {
+    margin-top: 0;
+    font-family: "Tektur", sans-serif;
+    font-weight: 500;
+}
+
+.tarif-propriete p,
+.tarif-proprietaire p,
+.tarif-apres p,
+.tarif-contact p {
+    line-height: 1.7;
+}
+
+.btn-tarif {/*______________Bouton */
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: 1px solid #62b8ff;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-tarif:hover {
+    background: #62b8ff;
+    color: #020b18;
+}
+
+/* ================================
+   C'EST QUOI UN SITE VITRINE ?
+================================ */
+.site-vitrine {
+    font-family: "Tektur", sans-serif;
+    max-width: 1100px;
+    margin: 70px auto 0;
+    padding: 60px 6%;
+    /* color: white; */
+}
+
+.site-vitrine-intro {/* Introduction */
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.site-vitrine-intro h2 {
+    margin: 0 0 25px;
+    font-family: "Tektur", sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.site-vitrine-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.site-vitrine-points {/* Les 4 points */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid rgba(80, 170, 255, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.site-vitrine-point {
+    padding: 35px 40px;
+}
+
+.site-vitrine-point:nth-child(odd) {
+    border-right: 1px solid rgba(80, 170, 255, 0.2);
+}
+
+.site-vitrine-point:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(80, 170, 255, 0.2);
+}
+
+.site-vitrine-point h3 {
+    margin: 0 0 18px;
+    font-family: "Tektur", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.site-vitrine-point h3::before {
+    content: "›";
+    margin-right: 10px;
+    color: #62b8ff;
+}
+
+.site-vitrine-point p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.site-vitrine-conclusion {/* Conclusion */
+    max-width: 850px;
+    margin: 45px auto 0;
+    padding: 30px 35px;
+    border-left: 2px solid #62b8ff;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.site-vitrine-conclusion p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.site-vitrine-conclusion p + p {
+    margin-top: 10px;
+}
+
+.site-vitrine-conclusion strong {
+    font-family: "Tektur", sans-serif;
+    font-weight: 500;
+}
+
+
+
+/*________________________________________________________________________________________RÈGLES MOBILE (> 1024px)*/
 @media (max-width: 1024px) {
     article, 
     .reverse {
@@ -180,8 +446,8 @@ article footer {
         justify-self: stretch;
         margin: 5px auto;
     }
-
-    #tarifs {
+        /*____________________________TARIFS MOBILE AVANT*/
+    /* #tarifs {
         width: 98%;
     }
 
@@ -192,7 +458,74 @@ article footer {
 
     #tarifs h2 {
         margin-top: 5%;
+    } */
+     
+}
+
+@media (max-width: 700px) {/*___________________________________NVX TARIF MOBILE*/
+
+    .tarifs {
+        padding: 60px 5%;
+    }
+
+    .tarif-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+    }
+
+    .tarif-contenu {
+        grid-template-columns: 1fr;
+    }
+
+    .tarif-bloc {
+        padding: 30px 25px;
+    }
+
+    .tarif-bloc:nth-child(odd) {
+        border-right: none;
+    }
+
+    .tarif-bloc:nth-child(3) {
+        border-bottom: 1px solid rgba(80, 170, 255, 0.2);
+    }
+
+    .tarif-delai,
+    .tarif-propriete,
+    .tarif-proprietaire,
+    .tarif-apres,
+    .tarif-contact {
+        padding: 30px 25px;
     }
 }
 
+/* ================================
+   C'EST QUOI UN SITE VITRINE ? MOBILE
+================================ */
 
+@media (max-width: 700px) {
+
+    .site-vitrine {
+        padding: 50px 5%;
+    }
+
+    .site-vitrine-points {
+        grid-template-columns: 1fr;
+    }
+
+    .site-vitrine-point {
+        padding: 30px 25px;
+    }
+
+    .site-vitrine-point:nth-child(odd) {
+        border-right: none;
+    }
+
+    .site-vitrine-point:nth-child(3) {
+        border-bottom: 1px solid rgba(80, 170, 255, 0.2);
+    }
+
+    .site-vitrine-conclusion {
+        padding: 25px;
+    }
+}
