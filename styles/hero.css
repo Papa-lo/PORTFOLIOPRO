@@ -34,8 +34,18 @@
     font-weight: 300;
     font-size: clamp(1.5rem, 5vw, 4rem);
     opacity: 0;
-    transform: translateX(500px);
-    animation: apparition 1s ease 0.1s forwards;
+    transform: translateY(-500px);
+    animation: apparition 2s ease 0.1s forwards;
+    
+    color: #ffffff;
+    /* font-weight: 700; */
+
+    text-shadow:
+        0 0 2px #fff,
+        0 0 5px #00eaff,
+        0 0 10px #00bfff,
+        0 0 20px #008cff,
+        0 0 35px #006eff;
 }
 
 #slogan h2 {
@@ -45,14 +55,26 @@
     /* margin-top: 9%; */
     opacity: 0;
     transform: translateX(-500px);
-    animation: apparition 1s ease 0.1s forwards;
+    animation: apparition 2s ease 0.1s forwards;
+}
+
+#slogan h2:hover {
+    color: #ffffff;
+    /* font-weight: 700; */
+
+    text-shadow:
+        0 0 2px #fff,
+        0 0 5px #00eaff,
+        0 0 10px #00bfff,
+        0 0 20px #008cff,
+        0 0 35px #006eff;
 }
 
 #bando {
     background-color: rgba(15, 23, 42, 0.4);
     width: 100vw;
     opacity: 0;
-    animation: apparition 1s ease 0.1s forwards;
+    animation: apparition 2s ease 0.1s forwards;
 }
 
 #bando p {
@@ -61,7 +83,7 @@
     margin: 0;
     opacity: 0;
     transform: translateX(500px);
-    animation: apparition 1s ease 0.1s forwards;
+    animation: apparition 2s ease 0.1s forwards;
 }
 
 /*________________________________________________________________Boutons*/
@@ -77,6 +99,7 @@
     font-weight: 600;
     /* border-radius: 20px; */
     opacity: 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
@@ -97,7 +120,7 @@
     }
     50% {/*Aggrandissement(+5%)*/
         transform: scale(1.05);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30); 
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30);
     }
     100% {
         transform: scale(0.95);

@@ -1,12 +1,11 @@
 /*___________________________________________________CONTENEUR FORMULAIRE*/
-#contact {
+/* #contact {
     font-family: "Tektur", sans-serif;
-    max-width: 600px; /* Le formulaire ne sera jamais trop large */
-    margin: 50px auto; /* Centre le formulaire dans la page */
+    max-width: 600px;
+    margin: 50px auto;
     text-align: center;
     padding: 30px;
-    background-color: white; /* Un joli fond blanc pour faire ressortir le formulaire */
-    /* border-radius: 20px; */
+    background-color: white;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
     scroll-margin-top: 80px;
 }
@@ -14,47 +13,44 @@
 #contact h2 {
     font-family: "Tektur", sans-serif;
     margin-top: 0;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 500;
 }
 
 .form-group {
     margin: 15px 0;
-}
+} */
 /*__________________________________________________________________CASES*/
-.form-group input, 
+/* .form-group input, 
 .form-group textarea {
-    width: 100%; /* Prend toute la largeur de la div .form-group */
-    padding: 15px; /* AGRANDIT LES CASES (haut/bas et gauche/droite) */
-    border: 1px solid #ccc; /* Bordure grise douce */
-    border-radius: 8px; /* Coins légèrement arrondis */
-    font-family: "Tektur", sans-serif; /* Même police que le reste du site */
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Tektur", sans-serif;
     font-size: 1rem;
-    box-sizing: border-box; /* Oblige le padding à rester à l'intérieur de la largeur définie */
+    box-sizing: border-box;
     transition: border-color 0.3s ease;
-}
+} */
 /*__________________________________________________________ACCESSIBILITÉ*/
 /*Ce qui se passe quand on clique dans une case*/
-.form-group input:focus, 
+/* .form-group input:focus, 
 .form-group textarea:focus {
-    outline: none;/*Enlève contour bleu moche par défaut Windows/Chrome*/
-    border-color: #004bca;/*Met bordure case en bleu*/
-    box-shadow: 0 0 5px rgba(0, 75, 202, 0.3);/*Effet lumineux*/
-}
+    outline: none;
+    border-color: #004bca;
+    box-shadow: 0 0 5px rgba(0, 75, 202, 0.3);
+} */
 /*__________________________________________________________BOUTON ENVOI*/
-.bouton-envoyer {
+/* .bouton-envoyer {
     font-family: "Tektur", sans-serif;
     color: #0F172A;
     background-color: #F8F9FA;
     text-decoration: none;
     display: inline-block;
     padding: 10px 40px;
-    /* font-size: 1rem; */
     font-weight: 600;
     border: solid 1px #62b8ff;
-    /* border-radius: 20px; */
     cursor: pointer;
-    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
 }
@@ -62,13 +58,145 @@
 .bouton-envoyer:hover {
     background-color: #62b8ff;
     color: #0F172A;
-    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35); */
-    /* transform: translateY(-2px); */
 }
 
 #form-success {
     display: none;
     color: green;
     font-weight: bold;
+} */
+
+/* --- BOITE A IDEES TECH --- */
+
+#contact {
+    font-family: "Tektur", sans-serif;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px 40px;
+    background-color: #0d1117; /* Fond sombre façon GitHub/Dark Mode */
+    /* border-radius: 12px; */
+    border: 1px solid #30363d;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
+/* La petite barre façon "fenêtre de terminal" en haut du formulaire */
+#contact::before {
+    content: '● ● ●   > boite_a_idees.exe'; /* Tu peux changer le texte ici */
+    display: block;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 0.85rem;
+    color: #8b949e;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #30363d;
+}
+
+#contact h2 {
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: #62b8ff; /* Bleu tech */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+
+/* Champs de saisie (Inputs et Textarea) */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    font-family: "Tektur", sans-serif;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #161b22; /* Fond légèrement plus clair que la boîte */
+    border: 1px solid #30363d;
+    /* border-radius: 6px; */
+    color: #F8F9FA; /* Texte clair */
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Très important pour que la largeur soit exacte */
+}
+
+/* Effet au focus (quand on clique dedans) */
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #62b8ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2), 0 0 15px rgba(88, 166, 255, 0.1); /* Lueur bleue */
+}
+
+/* Personnalisation du Textarea */
+#contact textarea {
+    resize: vertical; /* Permet seulement de redimensionner en hauteur */
+    min-height: 120px;
+}
+
+/* Le texte placeholder (l'indice gris) */
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: #484f58;
+    font-style: italic;
+}
+
+/* Le bouton d'envoi */
+.bouton-envoyer {
+    font-family: "Tektur", sans-serif;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: #F8F9FA;
+    border: 1px solid #62b8ff;
+    /* border-radius: 6px; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 2px; */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: apparition 0.5s ease-out 0.9s forwards, pulse-subtle 2.5s infinite ease-in-out;
+}
+
+.bouton-envoyer:hover {
+    background-color: #62b8ff;
+    color: #0d1117;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+    animation-play-state: paused;
+}
+
+/* Les textes en dessous (Mentions légales) */
+.form-info {
+    margin-top: 25px;
+    font-size: 0.75rem;
+    color: #484f58;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.form-info a {
+    color: #62b8ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #62b8ff;
+}
+
+.form-info a:hover {
+    color: #62b8ff;
+}
+
+/* Le message de succès (Caché par défaut) */
+#form-success {
+    display: none; /* On le cache en attendant le JS */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0d2818; /* Vert très sombre */
+    border: 1px solid #238636;
+    /* border-radius: 6px; */
+    color: #3fb950; /* Vert terminal */
+    /* font-family: 'Courier New', Courier, monospace; */
+    text-align: center;
+}

@@ -6,15 +6,17 @@
 
 #intro h2 {
     text-align: center;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 500;
 }
+
 
 #intro p {
     margin: 0 5%;
     padding: 0 5%;
-    border-left: solid 1px;
-    border-right: solid 1px;
+    /* border-left: solid 1px; */
+    /* border-right: solid 1px; */
+    border-left: 2px solid #62b8ff;
     font-size: clamp(0.85rem, 1.1vw, 1.6rem);
     line-height: 1.5;
 }
@@ -59,9 +61,9 @@ article {background-color: white;
 
 article h2, h3 {
     text-align: center;
-    font-size: clamp(1.5rem, 4vw, 2rem);/*Min: 1.2rem, Max: 1.8rem*/
+    font-size: clamp(1.5rem, 4vw, 1.8rem);/*Min: 1.2rem, Max: 1.8rem*/
     margin: 0 0 2.5% 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 article p {
@@ -97,8 +99,8 @@ article footer {
 }
 
 #localisation h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 500;
 }
 
 #localisation p {
@@ -428,7 +430,14 @@ article footer {
     font-family: "Tektur", sans-serif;
     font-weight: 500;
 }
-
+/*______________________________________________________________________Mes strong*/
+.mestr {
+    font-size: 115%;
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+  -webkit-background-clip: text; /* Pour Chrome, Safari, Edge */
+  background-clip: text;         /* La propriété standard demandée par VS Code */
+  -webkit-text-fill-color: transparent;
+}
 
 
 /*________________________________________________________________________________________RÈGLES MOBILE (> 1024px)*/

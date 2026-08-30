@@ -78,8 +78,12 @@ body {
     padding: 10px 20px;
     background-color: transparent;
     border: 1px solid #62b8ff;
-    color: #0F172A;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    /* color: #0F172A; */
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+  -webkit-background-clip: text; /* Pour Chrome, Safari, Edge */
+  background-clip: text;         /* La propriété standard demandée par VS Code */
+  -webkit-text-fill-color: transparent;
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
     /* font-size: 1rem; */
     font-weight: 600;
     /* border-radius: 20px; */
@@ -93,7 +97,7 @@ body {
 .btn:focus {
     background-color: #62b8ff;
     color: #0F172A;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35); */
     animation-play-state: paused;/*Bloque animation*/
 }
 /*_________________________________________________________________footer*/
@@ -157,7 +161,7 @@ body {
 }
 
 .back-to-top:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 /* ________________________________________________________Icones Mobile */
 @media (max-width: 550px) {  
