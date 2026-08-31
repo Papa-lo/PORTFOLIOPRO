@@ -1,41 +1,66 @@
 /*_________________________________Moi*/
 #moi {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-h2, h3 {
+#moi h2, h3 {
+    margin: 0;
     text-align: center;
     font-size: clamp(1.2rem, 4vw, 2rem);
-    font-weight: 100;
+    font-weight: 500;
 }
 
-#Ap-intro {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
+#moi p {
+    text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
+    hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
+    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
 }
 
-#Ap-intro p {
-    margin: 0;
+#Ap-title {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+  /* padding: 10px 0; */
 }
 
-#Ap-intro img {
-    height: clamp(200px, 40vw, 300px);
+#Ap-title img {
+    width: clamp(8vw, 10vw, 20vw);
+    height: auto;
 }
 
-@media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (> 1024px)*/
+#maphoto {
+    display: flex;
+    justify-content: center;
+}
+
+#maphoto img {
+    width: clamp(200px, 40vw, 300px);
+    height: auto;
+}
+
+.mestr {
+    font-size: 115%;
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+  -webkit-background-clip: text; /* Pour Chrome, Safari, Edge */
+  background-clip: text;         /* La propriété standard demandée par VS Code */
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) {/*______________________________RÈGLES MOBILE (< 1024px)*/
 
     #Ap-intro {
         display: flex;
         flex-direction: column;
     }
 
-    #Ap-intro a {
+    /* #Ap-intro a {
         margin: auto;
-    }
+    } */
+
+    
 }
 

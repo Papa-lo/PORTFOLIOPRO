@@ -11,7 +11,8 @@ html {
 body {
     margin: 0;
     background-color: #F8F9FA;
-    overflow-x: hidden;/*pour cacher ce qui va arriver par le coté*/
+    /* overflow-x: hidden; */
+    /*pour cacher ce qui va arriver par le coté*/
 }
 
 /*_________________________________________________________________Entete*/
