@@ -9,6 +9,10 @@
     max-width: 100%;
 }
 
+#mes-chantiers h1 {
+    font-weight: 500;
+}
+
 h2, h3 {
     text-align: center;
     font-size: clamp(1.2rem, 4vw, 1.8rem);

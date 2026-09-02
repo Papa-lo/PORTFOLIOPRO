@@ -4,14 +4,18 @@
     margin: 15px auto;
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
-    line-height: 1.8;
+    line-height: 2;
+}
+
+#moi h1 {
+    font-weight: 500;
 }
 
 #moi h2, h3 {
     margin: 0;
     text-align: center;
     font-size: clamp(1.2rem, 4vw, 2rem);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #moi p {
@@ -23,13 +27,14 @@
 #Ap-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* gap: 10px; */
   /* padding: 10px 0; */
 }
 
 #Ap-title img {
-    width: clamp(8vw, 10vw, 20vw);
-    height: auto;
+    /* width: clamp(8vw, 10vw, 20vw); */
+    height: 7.5vw;
 }
 
 #maphoto {
@@ -60,6 +65,11 @@
     /* #Ap-intro a {
         margin: auto;
     } */
+
+    #Ap-title {
+        display: flex;
+        flex-direction: column;
+    }
 
     
 }
