@@ -110,12 +110,12 @@
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    background-color: #161b22; /* Fond légèrement plus clair que la boîte */
+    background-color: #0F172A; /* Fond légèrement plus clair que la boîte */
     border: 1px solid #30363d;
     /* border-radius: 6px; */
     color: #F8F9FA; /* Texte clair */
     /* font-family: 'Courier New', Courier, monospace; */
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     box-sizing: border-box; /* Très important pour que la largeur soit exacte */
 }
@@ -138,7 +138,7 @@
 /* Le texte placeholder (l'indice gris) */
 #contact input::placeholder,
 #contact textarea::placeholder {
-    color: #484f58;
+    color: #8b949e;
     font-style: italic;
 }
 
@@ -173,7 +173,7 @@
 .form-info {
     margin-top: 25px;
     font-size: 0.75rem;
-    color: #484f58;
+    color: #8b949e;
     text-align: center;
     line-height: 1.5;
 }

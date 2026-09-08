@@ -1,27 +1,10 @@
-/*_________________________________Moi*/
-#moi {
+/*_________________________________A propos*/
+#Ap {
     max-width: 800px;
     margin: 15px auto;
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
     line-height: 2;
-}
-
-#moi h1 {
-    font-weight: 500;
-}
-
-#moi h2, h3 {
-    margin: 0;
-    text-align: center;
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    font-weight: 400;
-}
-
-#moi p {
-    text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
-    hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
-    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
 }
 
 #Ap-title {
@@ -33,8 +16,24 @@
 }
 
 #Ap-title img {
-    /* width: clamp(8vw, 10vw, 20vw); */
-    height: 7.5vw;
+    width: clamp 4vw;
+}
+
+#Ap h1 {
+    font-weight: 500;
+}
+
+#Ap h2, h3 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 400;
+}
+
+#Ap p {
+    text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
+    hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
+    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
 }
 
 #maphoto {
@@ -48,7 +47,7 @@
 }
 
 .mestr {
-    font-size: 115%;
+    /* font-size: 115%; */
     background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
   -webkit-background-clip: text; /* Pour Chrome, Safari, Edge */
   background-clip: text;         /* La propriété standard demandée par VS Code */

@@ -1,26 +1,35 @@
-#mes-chantiers {
+/*_________________________________Mes chantiers*/
+#chan {
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 0 20px;
     font-family: "Tektur", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    line-height: 2;
+    text-align: center;
 }
 
-#mes-chantiers img {
-    max-width: 100%;
-}
-
-#mes-chantiers h1 {
+#chan h1 {
     font-weight: 500;
 }
 
-h2, h3 {
+#chan h2, h3 {
+    margin: 0;
     text-align: center;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-    font-weight: 100;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 400;
+}
+
+#chan img {
+    max-width: 100%;
+}
+
+#chan h1 {
+    font-weight: 500;
 }
 
 #chan-par {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
+    hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
+    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
 }
 

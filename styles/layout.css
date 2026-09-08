@@ -4,6 +4,32 @@ bleu nuit : #0F172A
 bleu elec : #62b8ff
 */
 
+/*__________________________________________________________________Fonds*/
+/* tektur-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/tektur-v6-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tektur-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/tektur-v6-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tektur-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/tektur-v6-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -76,7 +102,7 @@ body {
     /* font-family: "Tektur", sans-serif; */
     text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background-color: transparent;
     border: 1px solid #62b8ff;
     /* color: #0F172A; */
@@ -87,6 +113,7 @@ body {
     /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
     /* font-size: 1rem; */
     font-weight: 600;
+    font-size: clamp(0.9rem, 1rem, 1.5rem);
     /* border-radius: 20px; */
     /* opacity: 0; */
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); */
@@ -200,5 +227,19 @@ body {
     height: clamp(20px, 15vw, 65px);
     margin: 15px auto;
     }
+
 }
 
+@media (max-width: 1024px) {
+    /*______________________________________________________btn mobile*/
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*______________________________________________________legal mobile*/
+    .legal-page {
+        margin: 0 5vw;
+    }
+}

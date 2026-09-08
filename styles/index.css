@@ -1,3 +1,29 @@
+/*__________________________________________________________________Fonds*/
+/* tektur-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/tektur-v6-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tektur-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/tektur-v6-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tektur-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/tektur-v6-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /*__________________________________________________________________Intro*/
 #intro {
     font-family: "Tektur", sans-serif;
@@ -14,10 +40,8 @@
 #intro p {
     margin: 0 5%;
     padding: 0 5%;
-    /* border-left: solid 1px; */
-    /* border-right: solid 1px; */
     border-left: 2px solid #62b8ff;
-    font-size: clamp(0.8rem, 1.1rem, 1.6rem);
+    font-size: clamp(0.9rem, 1.1rem, 1.6rem);
     line-height: 2;
 
     text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
@@ -35,7 +59,8 @@
 .article-detail {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .anim {background-color: white;
@@ -63,19 +88,23 @@
 
 article h2 {
     text-align: center;
-    font-size: clamp(1.4rem, 4vw, 1.8rem);/*Min: 1.4rem, Max: 1.8rem*/
+    font-size: clamp(1.3rem, 1.6rem, 1.8rem);/*Min: 1.4rem, Max: 1.8rem*/
     margin: 0.5vw 0 0.5vw 0;
     font-weight: 400;
 }
 
 article p {
-    font-size: clamp(0.5rem, 0.9rem, 1.3rem);
-    line-height: 1.5;
-    margin: 0 4%;
+    /* flex: 1; */
+    font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1.25rem);
+  
+  /* C'est ICI que la magie opère : la hauteur de ligne grandit avec l'écran */
+  line-height: clamp(1.45, 1.2rem + 0.8vw, 2.2);
+    margin: auto 2vw;
     /*___________________________________________________________Alignements paragraphes*/
     text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
     hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
-    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
+    /* Indique au navigateur que le texte est en français pour bien couper les mots => MAC !!!*/
+    -webkit-hyphens: auto;
 }
 
 article img {/*Style uniforme images (portrait ou paysage)*/
@@ -95,7 +124,7 @@ article.reverse img {
 
 article footer {
     text-align: center;
-    padding: 15px 0 25px 0;
+    padding: 0 0 20px 0;
 }
 
 
@@ -136,7 +165,7 @@ article footer {
     font-family: "Tektur", sans-serif;
     padding: 80px 6%;
     background: #020b18;
-    color: white;
+    color: #F8F9FA;
 }
 
 .tarifs-intro {
@@ -159,7 +188,7 @@ article footer {
     font-size: 1.05rem;
 }
 
-.tarifs-intro strong {
+.tarifs strong {
     color: #62b8ff;
 }
 

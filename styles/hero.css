@@ -1,3 +1,22 @@
+/*__________________________________________________________________Fonds*/
+
+/* tourney-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tourney';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/tourney-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tourney-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Tourney';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/tourney-v16-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 #hero {
     position: relative;
     width: 100%;
