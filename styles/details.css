@@ -4,6 +4,9 @@
     padding: 0 20px;
     font-family: "Tektur", sans-serif;
     line-height: 1.6;
+    text-align: justify;/* Force chaque ligne à occuper toute la largeur du conteneur */
+    hyphens: auto;/* Active la coupure automatique des mots avec un tiret (-) */
+    -webkit-hyphens: auto;/* Indique au navigateur que le texte est en français pour bien couper les mots */
 }
 
 .page-detail ul {

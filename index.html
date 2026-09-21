@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-    <head>
+    <head><!-- HEAD -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Développeur Web Full-Stack en Gironde | AHLS-Web</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/layout.css">
+        <link rel="stylesheet" href="styles/contact.css">
         <meta name="description" content="AHLS-Web conçoit des sites web sur mesure, sites vitrines et applications métier pour artisans, commerçants, indépendants et petites entreprises en Gironde.">      
         <link rel="canonical" href="https://ahls-web.netlify.app/">
         <link rel="icon" type="image/png" href="images/favicon.png">
@@ -16,16 +18,6 @@
         <meta property="og:site_name" content="AHLS-Web">
         <meta property="og:locale" content="fr_FR">
         <!-- <meta property="og:image" content="https://ahls-web.netlify.app/images/og-image.jpg"> -->
-        
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/layout.css">
-        <link rel="stylesheet" href="styles/hero.css">
-        <link rel="stylesheet" href="styles/details.css">
-        <link rel="stylesheet" href="styles/contact.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Tektur:wght@400..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
-
         <!-- Données structurées -->
         <script type="application/ld+json">
         {
@@ -68,32 +60,31 @@
         }
         </script>
     </head>
-
     <body>
-        <header id="body-header">
+        <header id="body-header"><!-- HEADER -->
             <a href="index.html">
                 <div id="left">
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo.png" alt="logo de AHLS-Web">
                 </div>
             </a>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html"><img src="images/logos/home.svg" alt="" class="nav-icon"><span class="nav-text">Accueil</span></a></li>
-                    <li><a href="apropos.html"><img src="images/logos/apropos.svg" alt="" class="nav-icon"><span class="nav-text">A propos</span></a></li>
-                    <li><a href="chantiers.html"><img src="images/logos/chantiers.svg" alt="" class="nav-icon"><span class="nav-text">Chantiers</span></a></li>
-                    <li><a href="#contact"><img src="images/logos/contact.svg" alt="" class="nav-icon"><span class="nav-text">Contact</span></a></li>
+                    <li><a href="index.html"><img src="images/logos/home.svg" alt="Lien vers l'accueil" class="nav-icon"><span class="nav-text">Accueil</span></a></li>
+                    <li><a href="apropos.html"><img src="images/logos/apropos.svg" alt="Lien vers A propos" class="nav-icon"><span class="nav-text">A propos</span></a></li>
+                    <li><a href="chantiers.html"><img src="images/logos/chantiers.svg" alt="Lien vers mes chantiers" class="nav-icon"><span class="nav-text">Chantiers</span></a></li>
+                    <li><a href="#contact"><img src="images/logos/contact.svg" alt="Lien vers contact" class="nav-icon"><span class="nav-text">Contact</span></a></li>
                 </ul>
             </nav>
-            <a href="index.html">
+            <!-- <a href="index.html">
                 <div id="right">
                     <p>AHLS-Web</p>
                 </div>
-            </a>
+            </a> -->
         </header>
-        
+
         <main>
             <section id="hero">
-                <img src="images/hero.webp" alt="Une boutique vide et une autre pleine.">
+                <img src="images/hero.webp" alt="photo d'une boutique vide et une autre pleine.">
                 <div id="slogan">
                     <h1>Vos idées. Mon atelier. Le web.</h1>
                     <h2>Votre savoir-faire mérite d'être vu.</h2>
@@ -115,13 +106,13 @@
 
             <section id="articles"><!--_____________________________________________________________ ARTICLES -->                
                 <article id="expert" class="anim">
-                    <img src="images/expert.webp" alt="Experts de la construction">
+                    <img src="images/expert.webp" alt="Photo d'un chantier et et d'une tablette avec le chantier terminé">
                     <div class="article-detail">
                         <header>
                             <h2>Votre vitrine, partout, tout le temps</h2>
                         </header>
                         <p>Vos clients sont sur internet avant même de vous appeler. Je crée des sites web et des applications qui transforment <strong class="mestr">votre savoir-faire</strong>
-                            en une vitrine digitale. Des outils de travail conçu pour résister à la réalité et mettre en valeur <strong class="mestr">votre entreprise</strong>, où que vos clients
+                            en une <strong class="mestr">vitrine digitale</strong>. Des outils de travail conçu pour résister à la réalité et mettre en valeur <strong class="mestr">votre entreprise</strong>, où que vos clients
                             se trouvent en Nouvelle-Aquitaine.
                         </p>
                         <footer>
@@ -131,7 +122,7 @@
                 </article>
 
                 <article id="artisan" class="reverse anim">
-                    <img src="images/artisan.webp" alt="Photo de Laurent Ahlsweh">
+                    <img src="images/artisan.webp" alt="Photo des mains d'un potier au travail">
                     <div class="article-detail">
                         <header>
                             <h2>Un savoir-faire numérique, sur-mesure</h2>
@@ -147,7 +138,7 @@
                 </article>
 
                 <article id="vu" class="anim">
-                    <img src="images/vu.webp" alt="Sous titre h2 vu">
+                    <img src="images/vu.webp" alt="Photo d'un phare éclairant la nouvelle aquitaine">
                     <div class="article-detail">
                         <header>
                             <h2>S'éclairer dans le monde numérique</h2>
@@ -163,7 +154,7 @@
                 </article>
 
                 <article id="commerce" class="reverse anim">
-                    <img src="images/commerce.webp" alt="Photo de Laurent Ahlsweh">
+                    <img src="images/commerce.webp" alt="Photo d'un client qui par, ravi d'une épicerie">
                     <div class="article-detail">
                         <header>
                             <h2>Du comptoir à l'écran : pas de frontières</h2>
@@ -179,7 +170,7 @@
                 </article>
 
                 <article id="hote" class="anim">
-                    <img src="images/hote.webp" alt="Photo de Laurent Ahlsweh">
+                    <img src="images/hote.webp" alt="Photo d'une somptueuse chambre'">
                     <div class="article-detail">
                         <header>
                             <h2>L'authenticité de votre établissement</h2>
@@ -359,7 +350,7 @@
                 <p>Basé à Saint Ciers sur Gironde (33)</p>
                 <p>Développeur Web & Accompagnement Numérique</p>
             </section>
-            <img src="images/logo.png" alt="">
+            <img src="images/logo.png" alt="logo de AHLS-Web">
             <section>
                 <p><a href="legal/mentions-legales.html">Mentions légales</a></p>
                 <p><a href="legal/cgv.html">CGV</a></p>
@@ -368,7 +359,7 @@
         </footer>
         
         <a class="back-to-top" aria-label="Retour en haut">
-            <img src="images/fleche.png" alt="">
+            <img src="images/fleche.png" alt="Flèche de retour haut de page">
         </a>
         <script src="index.js"></script>
         
